@@ -16,8 +16,8 @@ typedef enum {
 // Pins
 //#define GREEN_LED MT3620_RDB_LED1_GREEN
 //#define BLUE_LED  MT3620_RDB_LED2_BLUE
-#define TRIG_PIN  MT3620_RDB_HEADER1_PIN4_GPIO
-#define ECHO_PIN  MT3620_RDB_HEADER1_PIN6_GPIO
+#define TRIG_PIN  MT3620_RDB_HEADER1_PIN12_GPIO
+#define ECHO_PIN  MT3620_RDB_HEADER2_PIN4_GPIO
 
 
 #define RED_LED1 MT3620_RDB_LED1_RED
@@ -66,7 +66,7 @@ int main(void) {
     // LEDs öffnen
    // int fdGreen = GPIO_OpenAsOutput(GREEN_LED, GPIO_OutputMode_PushPull, GPIO_Value_Low);
     //int fdBlue  = GPIO_OpenAsOutput(BLUE_LED, GPIO_OutputMode_PushPull, GPIO_Value_Low);
-    int fdRed1  = GPIO_OpenAsOutput(RED_LED1, GPIO_OutputMode_PushPull, GPIO_Value_Low);
+    int fdRed1  = GPIO_OpenAsOutput(RED_LED1, GPIO_OutputMode_PushPull, GPIO_Value_High);
     int fdRed2  = GPIO_OpenAsOutput(RED_LED2, GPIO_OutputMode_PushPull, GPIO_Value_Low);
     int fdRed3  = GPIO_OpenAsOutput(RED_LED3, GPIO_OutputMode_PushPull, GPIO_Value_Low);
     int fdRed4  = GPIO_OpenAsOutput(RED_LED4, GPIO_OutputMode_PushPull, GPIO_Value_Low);
