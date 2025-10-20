@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "mt3620.h": "c"
+        "mt3620.h": "c",
+        "iothub_client.h": "c"
     }
 }
