@@ -1,0 +1,15 @@
+Schauen ob device connected ist:
+azsphere device list-attached
+
+Falls nicht verbunden: In Powershell mit Adminrechten
+net stop AzureSphereDeviceCommunicationService
+net startAzureSphereDeviceCommunicationService
+
+Falls Login nötig:
+azsphere login
+
+Falls bereits Programm läuft:
+azsphere device sideload delete
+
+Programm flashen
+azsphere device sideload deploy --image ./out/ARM-Debug/Blink.imagepackage
