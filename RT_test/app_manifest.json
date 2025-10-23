@@ -1,0 +1,10 @@
+{
+  "SchemaVersion": 1,
+  "Name": "RT_test",
+  "ComponentId": "13e016bc-6f65-42b7-9e05-f92d9ea10378",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [],
+  "Capabilities": {
+  },
+  "ApplicationType": "RealTimeCapable"
+}
