@@ -1,0 +1,11 @@
+{
+  "SchemaVersion": 1,
+  "Name": "RTCore_Blank",
+  "ComponentId": "6b2de05f-eb0f-4433-90e5-74eb950f35c4",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [],
+  "Capabilities": {
+    "Uart": ["ISU0"]
+  },
+  "ApplicationType": "RealTimeCapable"
+}
