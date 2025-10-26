@@ -51,3 +51,7 @@ SECTIONS
 
     StackTop = ORIGIN(TCM) + LENGTH(TCM);
 }
+
+PROVIDE(__bss_start__ = .);
+PROVIDE(__bss_end__ = .);
+
