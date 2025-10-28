@@ -6,11 +6,14 @@
 #include "lib/UART.h"
 #include "lib/Print.h"
 #include "lib/CPUFreq.h"
+#include "lib/Platform.h"
+#include "lib/I2CMaster.h"
+#include "lib/GPIO.h"
 
 static UART *debug = NULL;
-static UART *driver = NULL;
-
-
+//static UART *driver = NULL;
+static I2CMaster *driver   = NULL;
+static const uint32_t buttonAGpio = 12;
 
 void _putchar(char character)
 {
@@ -57,6 +60,19 @@ _Noreturn void RTCoreMain(void){
 
     xTaskCreate(gpio_task, "BLINKI", 512, NULL, 5, NULL);
     vTaskStartScheduler();
+
+
+    driver = I2CMaster_Open(MT3620_UNIT_ISU2);
+    if (!driver) {
+        UART_Print(debug,
+            "ERROR: I2C initialisation failed\r\n");
+    }
+
+    I2CMaster_SetBusSpeed(driver, I2C_BUS_SPEED_STANDARD);
+
+
+    GPIO_ConfigurePinForInput(buttonAGpio);
+
     for(;;){
        
     }

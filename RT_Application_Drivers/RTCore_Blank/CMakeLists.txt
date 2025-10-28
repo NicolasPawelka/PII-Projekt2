@@ -51,7 +51,13 @@ set(OSAI_FREERTOS 1)
 add_compile_options(-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
 
-add_executable (${PROJECT_NAME} ${APP_SRC} ${OS_HAL_SRC} main.c)
+add_executable (${PROJECT_NAME} ${APP_SRC} ${OS_HAL_SRC} main.c lib/LSM6DS3.c lib/VectorTable.c 
+            lib/GPT.c lib/GPIO.c lib/I2CMaster.c)
+
+target_link_libraries(${PROJECT_NAME})
+
 set_target_properties (${PROJECT_NAME} PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/linker.ld)
 
 azsphere_target_add_image_package(${PROJECT_NAME})
+
+target_link_libraries(${PROJECT_NAME} PUBLIC -L"${CMAKE_SOURCE_DIR}")
