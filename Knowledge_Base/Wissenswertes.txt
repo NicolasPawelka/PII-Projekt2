@@ -31,7 +31,7 @@ https://github.com/gloveboxes/Azure-Sphere-Learning-Path/tree/master/samples/Azu
 
 In FreeRTOSConfig.h:
 #define xPortPendSVHandler              PendSV_Handler                --> muss zu PendSV
-#define vPortSVCHandler			SVC_Handler                   --> muss zu SVC
+#define vPortSVCHandler			SVC_Handler                   --> muss zu SVCall
 #define xPortSysTickHandler		SysTick_Handler               --> muss zu SysTick
 
 
