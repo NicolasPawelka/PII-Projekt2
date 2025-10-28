@@ -1,5 +1,13 @@
 {
     "cmake.configureOnOpen": true,
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-    "idf.pythonInstallPath": "C:\\Espressif\\tools\\idf-python\\3.11.2\\python.exe"
+    "idf.pythonInstallPath": "C:\\Espressif\\tools\\idf-python\\3.11.2\\python.exe",
+    "files.associations": {
+        "vectortable.h": "c",
+        "uart.h": "c",
+        "mt3620.h": "c",
+        "task.h": "c",
+        "nvic.h": "c",
+        "cpufreq.h": "c"
+    }
 }

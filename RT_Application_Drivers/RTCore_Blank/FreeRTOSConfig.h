@@ -70,6 +70,9 @@ errata. */
 #define configGENERATE_RUN_TIME_STATS			0
 #define configUSE_TIME_SLICING					0
 #define configHEAP_IN_SYSRAM					1
+#define configENABLE_FPU 1
+
+
 
 
 
@@ -122,8 +125,9 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 header file. */
 #define configASSERT( x ) if( ( x ) == 0 ) { taskDISABLE_INTERRUPTS(); for( ;; ); }
 
-#define xPortPendSVHandler		PendSV_Handler
-#define vPortSVCHandler			SVC_Handler
-#define xPortSysTickHandler		SysTick_Handler
+
+#define xPortPendSVHandler		PendSV
+#define vPortSVCHandler			SVCall
+#define xPortSysTickHandler		SysTick
 
 #endif /* FREERTOS_CONFIG_H */
