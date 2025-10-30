@@ -8,6 +8,12 @@
         "mt3620.h": "c",
         "task.h": "c",
         "nvic.h": "c",
-        "cpufreq.h": "c"
+        "cpufreq.h": "c",
+        "timers.h": "c",
+        "chrono": "cpp",
+        "timer.h": "c",
+        "stdint.h": "c",
+        "gpio.h": "c",
+        "print.h": "c"
     }
 }
