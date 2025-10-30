@@ -40,11 +40,27 @@ set(APP_SRC
     ${CMAKE_SOURCE_DIR}/lib/Print.c
     ${CMAKE_SOURCE_DIR}/lib/GPIO.c
     ${CMAKE_SOURCE_DIR}/lib/GPT.c
+    ${CMAKE_SOURCE_DIR}/lib/LSM6DS3.c
+    ${CMAKE_SOURCE_DIR}/lib/I2CMaster.c
+
 )
 
 # --- Executable ---
 add_executable(${PROJECT_NAME} ${APP_SRC})
 set_target_properties(${PROJECT_NAME} PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/linker.ld)
 
-# --- Azure Sphere packaging ---
+
+
+set(OSAI_FREERTOS 1)
+# Create executable
+# Einheitliche FPU-Einstellungen für Compiler + Linker
+add_compile_options(-mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard)
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard")
+
+target_link_libraries(${PROJECT_NAME})
+
+set_target_properties (${PROJECT_NAME} PROPERTIES LINK_DEPENDS ${CMAKE_SOURCE_DIR}/linker.ld)
+
 azsphere_target_add_image_package(${PROJECT_NAME})
+
+target_link_libraries(${PROJECT_NAME} PUBLIC -L"${CMAKE_SOURCE_DIR}")

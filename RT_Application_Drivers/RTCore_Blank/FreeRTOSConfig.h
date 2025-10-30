@@ -125,7 +125,6 @@ See http://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html. */
 header file. */
 #define configASSERT( x ) if( ( x ) == 0 ) { taskDISABLE_INTERRUPTS(); for( ;; ); }
 
-
 #define xPortPendSVHandler		PendSV
 #define vPortSVCHandler			SVCall
 #define xPortSysTickHandler		SysTick
