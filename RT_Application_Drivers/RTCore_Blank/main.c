@@ -191,7 +191,7 @@ _Noreturn void RTCoreMain(void){
     I2CMaster_SetBusSpeed(driver, I2C_BUS_SPEED_STANDARD);
 
     xTaskCreate(motor_task, "Motor_Task", 512, NULL, 5, NULL);
-    xTaskCreate(gpio_task, "BLINKI", 512, NULL, 5, NULL);
+   // xTaskCreate(gpio_task, "BLINKI", 512, NULL, 5, NULL);
     vTaskStartScheduler();
 
     GPIO_ConfigurePinForInput(buttonAGpio);
