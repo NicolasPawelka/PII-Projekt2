@@ -31,8 +31,13 @@ static const uint32_t buttonAGpio = 12;
 #define I2C_ADDR_MOTOR_1 0x0f
 #define I2C_ADDR_MOTOR_2 0x0d
 
-#define CMD_MOTOR_A           0xA1
-#define CMD_MOTOR_B           0xA5
+
+// #define CMD_MOTOR_A           0xA1
+// #define CMD_MOTOR_B           0xA5
+
+#define CMD_MOTOR_A             1
+#define CMD_MOTOR_B             2
+
 
 void Motor_Set(uint8_t motor, int8_t speed)
 {
@@ -61,12 +66,15 @@ void Motor_Set(uint8_t motor, int8_t speed)
         dir = 0x01; // egal, Geschwindigkeit 0 = stop
         pwm = 0;
     }
+     UART_Print(debug, "bis hierhin komme ich\r\n");
 
     uint8_t data[3] = { cmd, dir, pwm };
-    int32_t result = I2CMaster_WriteSync(driver, I2C_ADDR_MOTOR_1 , data, 3);
+    int32_t result = I2CMaster_WriteSync(driver, I2C_ADDR_MOTOR_2 , data, sizeof(data));
+    UART_Print(debug, "hier hänge ich ich\r\n");
 
     if (result != ERROR_NONE) {
         UART_Print(debug, "Fehler beim Senden über I2C!\r\n");
+        UART_Printf(debug,"Folgender Fehler aufgestreten: %ld",result);
     }
 }
 
@@ -141,15 +149,15 @@ static void motor_task(void *param)
 {
     while (1) {
         UART_Print(debug, "Motor A vorwärts\r\n");
-        Motor_Set(I2C_ADDR_MOTOR_1, 80);
+        Motor_Set(I2C_ADDR_MOTOR_2, 80);
         vTaskDelay(pdMS_TO_TICKS(2000));
 
         UART_Print(debug, "Motor A rückwärts\r\n");
-        Motor_Set(I2C_ADDR_MOTOR_1, -80);
+        Motor_Set(I2C_ADDR_MOTOR_2, -80);
         vTaskDelay(pdMS_TO_TICKS(2000));
 
         UART_Print(debug, "Motor A stop\r\n");
-        Motor_Set(I2C_ADDR_MOTOR_1, 0);
+        Motor_Set(I2C_ADDR_MOTOR_2, 0);
         vTaskDelay(pdMS_TO_TICKS(1000));
 
 
@@ -181,14 +189,16 @@ _Noreturn void RTCoreMain(void){
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
     GPIO_Init();
 
+    
  
-    driver = I2CMaster_Open(MT3620_UNIT_ISU2);
+    driver = I2CMaster_Open(MT3620_UNIT_ISU0);
     if (!driver) {
         UART_Print(debug,
             "ERROR: I2C initialisation failed\r\n");
     }
 
     I2CMaster_SetBusSpeed(driver, I2C_BUS_SPEED_STANDARD);
+    
 
     xTaskCreate(motor_task, "Motor_Task", 512, NULL, 5, NULL);
     xTaskCreate(gpio_task, "BLINKI", 512, NULL, 5, NULL);

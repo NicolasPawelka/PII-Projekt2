@@ -40,7 +40,6 @@ set(APP_SRC
     ${CMAKE_SOURCE_DIR}/lib/Print.c
     ${CMAKE_SOURCE_DIR}/lib/GPIO.c
     ${CMAKE_SOURCE_DIR}/lib/GPT.c
-    ${CMAKE_SOURCE_DIR}/lib/LSM6DS3.c
     ${CMAKE_SOURCE_DIR}/lib/I2CMaster.c
 
 )
