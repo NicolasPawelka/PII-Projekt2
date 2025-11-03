@@ -1,0 +1,10 @@
+{
+    "cmake.configureOnOpen": true,
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "files.associations": {
+        "azure_iot.h": "c",
+        "eventloop.h": "c",
+        "networking.h": "c",
+        "connection.h": "c"
+    }
+}

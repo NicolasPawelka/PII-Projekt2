@@ -1,0 +1,14 @@
+{
+  "SchemaVersion": 1,
+  "Name": "Send_telemetry",
+  "ComponentId": "c910d996-d180-4702-8b85-a6c7015c8c45",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": ["--Hostname", "PIIOT-Hub.azure-devices.net"],
+  "Capabilities": {
+    "AllowedConnections": ["PIIOT-Hub.azure-devices.net"],
+    "DeviceAuthentication": "77a77baa-2e5c-4934-b7b9-2ee3bd3395cd",
+    "NetworkConfig": true
+  },
+  "ApplicationType": "Default",
+  "MallocVersion": 2
+}
