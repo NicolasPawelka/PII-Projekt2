@@ -191,13 +191,13 @@ _Noreturn void RTCoreMain(void){
 
     
  
-    // driver = I2CMaster_Open(MT3620_UNIT_ISU0);
-    // if (!driver) {
-    //     UART_Print(debug,
-    //         "ERROR: I2C initialisation failed\r\n");
-    // }
+    driver = I2CMaster_Open(MT3620_UNIT_ISU3);
+    if (!driver) {
+        UART_Print(debug,
+            "ERROR: I2C initialisation failed\r\n");
+    }
 
-    // I2CMaster_SetBusSpeed(driver, I2C_BUS_SPEED_STANDARD);
+    I2CMaster_SetBusSpeed(driver, I2C_BUS_SPEED_STANDARD);
     
 
     // xTaskCreate(motor_task, "Motor_Task", 512, NULL, 5, NULL);
