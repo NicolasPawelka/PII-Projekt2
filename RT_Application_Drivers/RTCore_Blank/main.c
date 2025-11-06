@@ -16,6 +16,9 @@
 #include"timer.h"
 #include"Common.h"
 
+#include"Grove_Shield_Driver/include/GroveI2C.h"
+#include"Grove_Shield_Driver/include/GroveUart.h"
+
 
 
 
@@ -133,6 +136,13 @@ static void measure(){
 }
 
 
+static void test(){
+    UART* handle = UART_Open(MT3620_UNIT_ISU0,115200,UART_PARITY_NONE,1,NULL);
+    GroveShield_Initialize(handle,115200);
+    UART_Print(debug,"YEAH Buddy");
+}
+
+
 
 static void gpio_task(void *pParameters)
 {
@@ -184,29 +194,31 @@ _Noreturn void RTCoreMain(void){
     VectorTableInit();
     CPUFreq_Set(197600000);
 
-    debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
+    debug = UART_Open(MT3620_UNIT_ISU0,115200,UART_PARITY_NONE,1,NULL);
     UART_Print(debug, "--------------------------------\r\n");
     UART_Print(debug, "Hallo\r\n");
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
-    GPIO_Init();
+    //GPIO_Init();
 
-    int i2cFd;
+    // int i2cFd;
     
  
-    driver = I2CMaster_Open(MT3620_UNIT_ISU3);
-    if (!driver) {
-        UART_Print(debug,
-            "ERROR: I2C initialisation failed\r\n");
-    }
+    // driver = I2CMaster_Open(MT3620_UNIT_ISU3);
+    // if (!driver) {
+    //     UART_Print(debug,
+    //         "ERROR: I2C initialisation failed\r\n");
+    // }
 
-    I2CMaster_SetBusSpeed(driver, I2C_BUS_SPEED_STANDARD);
+    // I2CMaster_SetBusSpeed(driver, I2C_BUS_SPEED_STANDARD);
     
 
     // xTaskCreate(motor_task, "Motor_Task", 512, NULL, 5, NULL);
-   xTaskCreate(gpio_task, "BLINKI", 512, NULL, 5, NULL);
-    vTaskStartScheduler();
+    //xTaskCreate(gpio_task, "BLINKI", 512, NULL, 5, NULL);
+    //vTaskStartScheduler();
 
-    GPIO_ConfigurePinForInput(buttonAGpio);
+    test();
+
+    //GPIO_ConfigurePinForInput(buttonAGpio);
 
     for(;;){
        __asm__("wfi");

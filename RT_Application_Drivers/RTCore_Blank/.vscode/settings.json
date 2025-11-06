@@ -20,6 +20,9 @@
         "grove.h": "c",
         "freertos.h": "c",
         "stdbool.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "exception": "c",
+        "new": "c",
+        "i2cmaster.h": "c"
     }
 }
