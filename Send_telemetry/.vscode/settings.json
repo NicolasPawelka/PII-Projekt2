@@ -5,6 +5,7 @@
         "azure_iot.h": "c",
         "eventloop.h": "c",
         "networking.h": "c",
-        "connection.h": "c"
+        "connection.h": "c",
+        "uart.h": "c"
     }
 }

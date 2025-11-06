@@ -6,6 +6,7 @@
 #include <applibs/eventloop.h>
 #include <applibs/networking.h>
 #include <applibs/log.h>
+#include<applibs/uart.h>
 #include "common/cloud.h"
 #include "common/eventloop_timer_utilities.h"
 #include "common/azure_iot.h"

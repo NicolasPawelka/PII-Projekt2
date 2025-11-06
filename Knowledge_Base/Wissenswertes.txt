@@ -22,6 +22,10 @@ Treiber GitHub repos:
 https://github.com/CodethinkLabs/mt3620-m4-drivers
 https://github.com/CodethinkLabs/mt3620-m4-samples
 
+Die UART Treiber funktionieren, allerdings hat das MT3620 keine eigene I2C Schnittstelle weswegen das Grove Shield verwendet werden muss. Für das Shield werden eigene
+Treiber benötigt (Stand 04.11.25): 
+https://github.com/Seeed-Studio/MT3620_Grove_Shield/tree/master
+
 GitHub Ultrasonic:
 https://github.com/gloveboxes/Azure-Sphere-Learning-Path/tree/master/samples/Azure_Sphere_Azure_RTOS_Ultrasonic-Rover
 
