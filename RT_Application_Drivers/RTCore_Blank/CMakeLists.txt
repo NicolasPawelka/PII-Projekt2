@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 project(RTCore_Blank C)
 
+add_subdirectory(MT3620_Grove_Shield_Library)
 # --- Definitions ---
 add_compile_definitions(OSAI_FREERTOS)
 add_compile_definitions(OSAI_ENABLE_DMA)
@@ -22,6 +23,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/MT3620_M4_BSP/FreeRTOS/include
     ${CMAKE_SOURCE_DIR}/MT3620_M4_BSP/FreeRTOS/portable
     ${CMAKE_SOURCE_DIR}/lib
+    ${CMAKE_SOURCE_DIR}/MT3620_Grove_Shield
    
 )
 

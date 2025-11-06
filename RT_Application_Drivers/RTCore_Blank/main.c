@@ -18,6 +18,7 @@
 
 
 
+
 static UART *debug = NULL;
 static UART *driver_Uart = NULL;
 bool *state = false;
@@ -189,6 +190,7 @@ _Noreturn void RTCoreMain(void){
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
     GPIO_Init();
 
+    int i2cFd;
     
  
     driver = I2CMaster_Open(MT3620_UNIT_ISU3);

@@ -16,6 +16,10 @@
         "gpio.h": "c",
         "print.h": "c",
         "common.h": "c",
-        "platform.h": "c"
+        "platform.h": "c",
+        "grove.h": "c",
+        "freertos.h": "c",
+        "stdbool.h": "c",
+        "unistd.h": "c"
     }
 }
