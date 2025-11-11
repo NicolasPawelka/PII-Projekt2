@@ -140,6 +140,7 @@ UART *UART_Open(Platform_Unit unit, unsigned baud, UART_Parity parity, unsigned 
     if (unit != MT3620_UNIT_UART_DEBUG) {
         dma = true;
     }
+    dma = false;
 
     MT3620_UART_FIELD_WRITE(id, vfifo_en, vfifo_en, dma);
 

@@ -7,7 +7,8 @@
 #include "FreeRTOS.h"
 #include"task.h"
 #include"mt3620.h"
-
+#include"lib/mt3620/uart.h"
+#include"Print.h"
 
 /**
 	Set bauud rate for SC18IM700
@@ -89,16 +90,30 @@ bool SC18IM700_ReadReg(UART* handle, uint8_t reg, uint8_t* data)
 	// Send
 
 	uint8_t send[3];
+	UART* debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
 
 	send[0] = 'R';
 	send[1] = reg;
 	send[2] = 'P';
 	
     UART_Write(handle,send,3);
+// uint8_t rx;
+// const uint8_t cmd[] = { 'R', 0x00, 'P' };
 
-    while(!UART_IsWriteComplete(handle)){
+// UART_Write(handle, cmd, sizeof(cmd));
+
+  while(!UART_IsWriteComplete(handle)){
         
     }
+
+// for (int i = 0; i < 1000000; ++i) {
+//     if (MT3620_UART_FIELD_READ(handle->id, lsr, dr)) {
+//         rx = (uint8_t)mt3620_uart[handle->id]->rbr;
+//         UART_Printf(debug,"Empfangenes Byte: 0x%02X\r\n", rx);
+//         break;
+//     }
+// }
+  
 
 	// Receive
 
@@ -215,7 +230,7 @@ static void baudrate_conf(UART* handle, unsigned int baudrate)
 		d0 = 0, d1 = 0;
 		while (d0 != baudrate_9600_conf[1])
 		{
-			SC18IM700_ReadReg(handle, 0x00, &d0);			
+			SC18IM700_ReadReg(handle, 0x00, &d0);		
 		}
 		while (d1 != baudrate_9600_conf[3])
 		{

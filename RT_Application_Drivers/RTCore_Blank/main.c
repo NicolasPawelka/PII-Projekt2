@@ -138,7 +138,7 @@ static void measure(){
 
 static void test(){
     UART* handle = UART_Open(MT3620_UNIT_ISU0,115200,UART_PARITY_NONE,1,NULL);
-    GroveShield_Initialize(handle,115200);
+    GroveShield_Initialize(handle,230400);
     UART_Print(debug,"YEAH Buddy");
 }
 
@@ -194,10 +194,11 @@ _Noreturn void RTCoreMain(void){
     VectorTableInit();
     CPUFreq_Set(197600000);
 
-    debug = UART_Open(MT3620_UNIT_ISU0,115200,UART_PARITY_NONE,1,NULL);
+    debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
     UART_Print(debug, "--------------------------------\r\n");
     UART_Print(debug, "Hallo\r\n");
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
+
     //GPIO_Init();
 
     // int i2cFd;
