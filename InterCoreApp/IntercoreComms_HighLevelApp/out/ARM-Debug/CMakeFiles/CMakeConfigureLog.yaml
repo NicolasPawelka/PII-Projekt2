@@ -544,7 +544,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -617,7 +617,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
       ENV{INCLUDE}:
         - "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17+Beta2403/usr/include"
@@ -648,7 +648,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/4.1.2/CompilerIdC/a.out
+        C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/4.1.2/CompilerIdC/a.out
       
   -
     kind: "find-v1"
@@ -768,7 +768,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -888,7 +888,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -1008,7 +1008,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -1128,7 +1128,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -1248,7 +1248,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -1368,7 +1368,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -1488,7 +1488,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -1895,7 +1895,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -2015,7 +2015,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -2422,7 +2422,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -2976,7 +2976,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "find-v1"
@@ -3530,7 +3530,7 @@ events:
         - "C:\\Users\\phlam\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
         - "C:\\Users\\phlam\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe"
         - "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/install/ARM-Debug"
+      CMAKE_INSTALL_PREFIX: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
       CMAKE_FIND_ROOT_PATH: "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
   -
     kind: "try_compile-v1"
@@ -3541,8 +3541,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/CMakeScratch/TryCompile-be4gty"
-      binary: "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/CMakeScratch/TryCompile-be4gty"
+      source: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/CMakeScratch/TryCompile-669axt"
+      binary: "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/CMakeScratch/TryCompile-669axt"
     cmakeVariables:
       CMAKE_C_FLAGS: "-B \"C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc\" -march=armv7ve -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard     -mcpu=cortex-a7 --sysroot=\"C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17\""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -3551,18 +3551,18 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/CMakeScratch/TryCompile-be4gty'
+        Change Dir: 'C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/CMakeScratch/TryCompile-669axt'
         
-        Run Build Command(s): C:/Users/phlam/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_80aba
-        [1/2] C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARFCD8~1.EXE -D_POSIX_C_SOURCE -isystem "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include" -B "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc" -march=armv7ve -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard     -mcpu=cortex-a7 --sysroot="C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"    -v -std=c11 -Wstrict-prototypes -Wno-pointer-sign -fPIC -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-omit-frame-pointer -fno-exceptions -Wall -Wswitch -Wempty-body -Wconversion -Wreturn-type -Wparentheses -Wno-format -Wuninitialized -Wunreachable-code -Wunused-function -Wunused-value -Wunused-variable -Werror=implicit-function-declaration -fstack-protector-strong -o CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): C:/Users/phlam/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_0a26a
+        [1/2] C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARFCD8~1.EXE -D_POSIX_C_SOURCE -isystem "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include" -B "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc" -march=armv7ve -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard     -mcpu=cortex-a7 --sysroot="C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"    -v -std=c11 -Wstrict-prototypes -Wno-pointer-sign -fPIC -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-omit-frame-pointer -fno-exceptions -Wall -Wswitch -Wempty-body -Wconversion -Wreturn-type -Wparentheses -Wno-format -Wuninitialized -Wunreachable-code -Wunused-function -Wunused-value -Wunused-variable -Werror=implicit-function-declaration -fstack-protector-strong -o CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARFCD8~1.EXE
         Target: arm-poky-linux-musleabi
         Configured with: ../../../../../../work-shared/gcc-9.3.0-r0/gcc-9.3.0/configure --build=x86_64-linux --host=i686-pokysdk-mingw32 --target=arm-poky-linux-musleabi --prefix=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr --exec_prefix=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr --bindir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/bin/arm-poky-linux-musleabi --sbindir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/bin/arm-poky-linux-musleabi --libexecdir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/libexec/arm-poky-linux-musleabi --datadir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/share --sysconfdir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/etc --sharedstatedir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/com --localstatedir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/var --libdir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/lib/arm-poky-linux-musleabi --includedir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/include --oldincludedir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/include --infodir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/share/info --mandir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/mnt/vss/_work/1/b/out/app-sdk/out/work/i686-nativesdk-mingw32-pokysdk-mingw32/gcc-cross-canadian-arm/9.3.0-r0/recipe-sysroot --enable-clocale=generic --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-default-pie --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-poky-linux-musleabi- --without-local-prefix --disable-install-libiberty --enable-lto --disable-libssp --enable-libitm --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/9.3.0 --with-build-time-tools=/mnt/vss/_work/1/b/out/app-sdk/out/work/i686-nativesdk-mingw32-pokysdk-mingw32/gcc-cross-canadian-arm/9.3.0-r0/recipe-sysroot-native/usr/arm-poky-linux-musleabi/bin --with-sysroot=/not/exist --with-build-sysroot=/mnt/vss/_work/1/b/out/app-sdk/out/work/i686-nativesdk-mingw32-pokysdk-mingw32/gcc-cross-canadian-arm/9.3.0-r0/recipe-sysroot --enable-poison-system-directories --disable-static --disable-nls --enable-initfini-array --disable-multilib --enable-default-pie --disable-nls
         Thread model: posix
         gcc version 9.3.0 (GCC) 
-        COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd'
-         C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/cc1.exe -quiet -v -iprefix c:\\progra~2\\mi3c21~1\\sysroots\\17\\tools\\gcc\\../../lib/arm-poky-linux-musleabi/gcc/arm-poky-linux-musleabi/9.3.0/ -isysroot C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17 -D _POSIX_C_SOURCE -isystem C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -mtls-dialect=gnu -march=armv7ve+simd -auxbase-strip CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj -Wstrict-prototypes -Wno-pointer-sign -Wall -Wswitch -Wempty-body -Wconversion -Wreturn-type -Wparentheses -Wformat=0 -Wuninitialized -Wunused-function -Wunused-value -Wunused-variable -Werror=implicit-function-declaration -std=c11 -version -fPIC -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-omit-frame-pointer -fno-exceptions -fstack-protector-strong -o C:\\Users\\phlam\\AppData\\Local\\Temp\\cc4Yr7dO.s
+        COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+         C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/cc1.exe -quiet -v -iprefix c:\\progra~2\\mi3c21~1\\sysroots\\17\\tools\\gcc\\../../lib/arm-poky-linux-musleabi/gcc/arm-poky-linux-musleabi/9.3.0/ -isysroot C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17 -D _POSIX_C_SOURCE -isystem C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -mtls-dialect=gnu -march=armv7ve+simd -auxbase-strip CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj -Wstrict-prototypes -Wno-pointer-sign -Wall -Wswitch -Wempty-body -Wconversion -Wreturn-type -Wparentheses -Wformat=0 -Wuninitialized -Wunused-function -Wunused-value -Wunused-variable -Werror=implicit-function-declaration -std=c11 -version -fPIC -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-omit-frame-pointer -fno-exceptions -fstack-protector-strong -o C:\\Users\\phlam\\AppData\\Local\\Temp\\ccXAsYLo.s
         GNU C11 (GCC) version 9.3.0 (arm-poky-linux-musleabi)
         	compiled by GNU C version 9.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -3587,13 +3587,13 @@ events:
         	compiled by GNU C version 9.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 868bf783dcfbb396f28aa56e57129b95
-        COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd'
-         C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/as.exe -v -march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj C:\\Users\\phlam\\AppData\\Local\\Temp\\cc4Yr7dO.s
+        COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+         C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/as.exe -v -march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj C:\\Users\\phlam\\AppData\\Local\\Temp\\ccXAsYLo.s
         GNU assembler version 2.34.0 (arm-poky-linux-musleabi) using BFD version (GNU Binutils) 2.34.0.20200220
         COMPILER_PATH=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/
         LIBRARY_PATH=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/;C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/lib/;C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/lib/arm-poky-linux-musleabi/9.3.0/;C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/lib/
-        COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_80aba.a && C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARM-PO~2.EXE qc libcmTC_80aba.a  CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\AR2064~1.EXE libcmTC_80aba.a && cd ."
+        COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_0a26a.a && C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARM-PO~2.EXE qc libcmTC_0a26a.a  CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\AR2064~1.EXE libcmTC_0a26a.a && cd ."
         
       exitCode: 0
   -
@@ -3624,18 +3624,18 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/CMakeScratch/TryCompile-be4gty']
+        ignore line: [Change Dir: 'C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/CMakeScratch/TryCompile-669axt']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/phlam/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_80aba]
-        ignore line: [[1/2] C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARFCD8~1.EXE -D_POSIX_C_SOURCE -isystem "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include" -B "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc" -march=armv7ve -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard     -mcpu=cortex-a7 --sysroot="C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"    -v -std=c11 -Wstrict-prototypes -Wno-pointer-sign -fPIC -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-omit-frame-pointer -fno-exceptions -Wall -Wswitch -Wempty-body -Wconversion -Wreturn-type -Wparentheses -Wno-format -Wuninitialized -Wunreachable-code -Wunused-function -Wunused-value -Wunused-variable -Werror=implicit-function-declaration -fstack-protector-strong -o CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): C:/Users/phlam/AppData/Local/Microsoft/WinGet/Packages/Ninja-build.Ninja_Microsoft.Winget.Source_8wekyb3d8bbwe/ninja.exe -v cmTC_0a26a]
+        ignore line: [[1/2] C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARFCD8~1.EXE -D_POSIX_C_SOURCE -isystem "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include" -B "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc" -march=armv7ve -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard     -mcpu=cortex-a7 --sysroot="C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"    -v -std=c11 -Wstrict-prototypes -Wno-pointer-sign -fPIC -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-omit-frame-pointer -fno-exceptions -Wall -Wswitch -Wempty-body -Wconversion -Wreturn-type -Wparentheses -Wno-format -Wuninitialized -Wunreachable-code -Wunused-function -Wunused-value -Wunused-variable -Werror=implicit-function-declaration -fstack-protector-strong -o CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARFCD8~1.EXE]
         ignore line: [Target: arm-poky-linux-musleabi]
         ignore line: [Configured with: ../../../../../../work-shared/gcc-9.3.0-r0/gcc-9.3.0/configure --build=x86_64-linux --host=i686-pokysdk-mingw32 --target=arm-poky-linux-musleabi --prefix=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr --exec_prefix=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr --bindir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/bin/arm-poky-linux-musleabi --sbindir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/bin/arm-poky-linux-musleabi --libexecdir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/libexec/arm-poky-linux-musleabi --datadir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/share --sysconfdir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/etc --sharedstatedir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/com --localstatedir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/var --libdir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/lib/arm-poky-linux-musleabi --includedir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/include --oldincludedir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/include --infodir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/share/info --mandir=/opt/exp23/3.1.9/sysroots/i686-pokysdk-mingw32/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/mnt/vss/_work/1/b/out/app-sdk/out/work/i686-nativesdk-mingw32-pokysdk-mingw32/gcc-cross-canadian-arm/9.3.0-r0/recipe-sysroot --enable-clocale=generic --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-default-pie --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-poky-linux-musleabi- --without-local-prefix --disable-install-libiberty --enable-lto --disable-libssp --enable-libitm --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/9.3.0 --with-build-time-tools=/mnt/vss/_work/1/b/out/app-sdk/out/work/i686-nativesdk-mingw32-pokysdk-mingw32/gcc-cross-canadian-arm/9.3.0-r0/recipe-sysroot-native/usr/arm-poky-linux-musleabi/bin --with-sysroot=/not/exist --with-build-sysroot=/mnt/vss/_work/1/b/out/app-sdk/out/work/i686-nativesdk-mingw32-pokysdk-mingw32/gcc-cross-canadian-arm/9.3.0-r0/recipe-sysroot --enable-poison-system-directories --disable-static --disable-nls --enable-initfini-array --disable-multilib --enable-default-pie --disable-nls]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.3.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd']
-        ignore line: [ C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/cc1.exe -quiet -v -iprefix c:\\progra~2\\mi3c21~1\\sysroots\\17\\tools\\gcc\\../../lib/arm-poky-linux-musleabi/gcc/arm-poky-linux-musleabi/9.3.0/ -isysroot C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17 -D _POSIX_C_SOURCE -isystem C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -mtls-dialect=gnu -march=armv7ve+simd -auxbase-strip CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj -Wstrict-prototypes -Wno-pointer-sign -Wall -Wswitch -Wempty-body -Wconversion -Wreturn-type -Wparentheses -Wformat=0 -Wuninitialized -Wunused-function -Wunused-value -Wunused-variable -Werror=implicit-function-declaration -std=c11 -version -fPIC -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-omit-frame-pointer -fno-exceptions -fstack-protector-strong -o C:\\Users\\phlam\\AppData\\Local\\Temp\\cc4Yr7dO.s]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+        ignore line: [ C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/cc1.exe -quiet -v -iprefix c:\\progra~2\\mi3c21~1\\sysroots\\17\\tools\\gcc\\../../lib/arm-poky-linux-musleabi/gcc/arm-poky-linux-musleabi/9.3.0/ -isysroot C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17 -D _POSIX_C_SOURCE -isystem C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -mtls-dialect=gnu -march=armv7ve+simd -auxbase-strip CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj -Wstrict-prototypes -Wno-pointer-sign -Wall -Wswitch -Wempty-body -Wconversion -Wreturn-type -Wparentheses -Wformat=0 -Wuninitialized -Wunused-function -Wunused-value -Wunused-variable -Werror=implicit-function-declaration -std=c11 -version -fPIC -ffunction-sections -fdata-sections -fno-strict-aliasing -fno-omit-frame-pointer -fno-exceptions -fstack-protector-strong -o C:\\Users\\phlam\\AppData\\Local\\Temp\\ccXAsYLo.s]
         ignore line: [GNU C11 (GCC) version 9.3.0 (arm-poky-linux-musleabi)]
         ignore line: [	compiled by GNU C version 9.3.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -3660,16 +3660,16 @@ events:
         ignore line: [	compiled by GNU C version 9.3.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 868bf783dcfbb396f28aa56e57129b95]
-        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd']
-        ignore line: [ C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/as.exe -v -march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj C:\\Users\\phlam\\AppData\\Local\\Temp\\cc4Yr7dO.s]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+        ignore line: [ C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/as.exe -v -march=armv7ve -mfloat-abi=hard -mfpu=neon-vfpv4 -meabi=5 -o CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj C:\\Users\\phlam\\AppData\\Local\\Temp\\ccXAsYLo.s]
         ignore line: [GNU assembler version 2.34.0 (arm-poky-linux-musleabi) using BFD version (GNU Binutils) 2.34.0.20200220]
         ignore line: [COMPILER_PATH=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/]
         ignore line: [LIBRARY_PATH=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/]
         ignore line: [C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/lib/]
         ignore line: [C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/lib/arm-poky-linux-musleabi/9.3.0/]
         ignore line: [C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_80aba.a && C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARM-PO~2.EXE qc libcmTC_80aba.a  CMakeFiles/cmTC_80aba.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\AR2064~1.EXE libcmTC_80aba.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='--sysroot=C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17' '-D' '_POSIX_C_SOURCE' '-isystem' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/usr/include' '-B' 'C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc'  '-mthumb' '-mfpu=neon-vfpv4' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-v' '-std=c11' '-Wstrict-prototypes' '-Wno-pointer-sign' '-fPIC' '-ffunction-sections' '-fdata-sections' '-fno-strict-aliasing' '-fno-omit-frame-pointer' '-fno-exceptions' '-Wall' '-Wswitch' '-Wempty-body' '-Wconversion' '-Wreturn-type' '-Wparentheses' '-Wformat=0' '-Wuninitialized' '-Wunused-function' '-Wunused-value' '-Wunused-variable' '-Werror=implicit-function-declaration' '-fstack-protector-strong' '-o' 'CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj' '-c' '-mtls-dialect=gnu' '-march=armv7ve+simd']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f libcmTC_0a26a.a && C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\ARM-PO~2.EXE qc libcmTC_0a26a.a  CMakeFiles/cmTC_0a26a.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\MI3C21~1\\Sysroots\\17\\tools\\gcc\\AR2064~1.EXE libcmTC_0a26a.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []

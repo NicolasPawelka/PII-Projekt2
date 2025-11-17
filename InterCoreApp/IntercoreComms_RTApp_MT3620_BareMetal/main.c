@@ -95,7 +95,7 @@ static void HandleSendTimerDeferred(void)
                                         .data4 = {0xba, 0xe1, 0xac, 0x26, 0xfc, 0xdd, 0x36, 0x27}};
 
     // The number cycles from "00" to "99".
-    static char txMsg[] = "Hallo, das hier ist eine Nachricht aus dem Real-Time Core. Wer das liest ist doof!";
+    static char txMsg[] = "Wer das liest ist doof!";
     const size_t txMsgLen = sizeof(txMsg);
 
     IntercoreResult icr = IntercoreSend(&icc, &hlAppId, txMsg, sizeof(txMsg) - 1);

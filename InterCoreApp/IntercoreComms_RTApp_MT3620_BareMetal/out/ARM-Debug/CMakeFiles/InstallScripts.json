@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/cmake_install.cmake"
+		"C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

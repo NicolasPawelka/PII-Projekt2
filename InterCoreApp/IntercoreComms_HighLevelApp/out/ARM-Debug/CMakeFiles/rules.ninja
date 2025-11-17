@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\phlam\Desktop\PII-Projekt\IntercoreComms_HighLevelApp -BC:\Users\phlam\Desktop\PII-Projekt\IntercoreComms_HighLevelApp\out\ARM-Debug
+  command = "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_HighLevelApp -BC:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_HighLevelApp\out\ARM-Debug
   description = Re-running CMake...
   generator = 1
 

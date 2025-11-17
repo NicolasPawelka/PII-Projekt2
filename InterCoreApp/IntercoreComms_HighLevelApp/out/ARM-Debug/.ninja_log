@@ -1,8 +1,8 @@
 # ninja log v7
-3	229	7850825991226592	CMakeFiles/IntercoreComms_HighLevelApp.dir/main.c.obj	3f6fbea6d36f0d01
-15	335	7850825991319544	CMakeFiles/IntercoreComms_HighLevelApp.dir/eventloop_timer_utilities.c.obj	f52e2e68a30385d1
-336	655	7850825994541104	IntercoreComms_HighLevelApp.out	80d7a3ef5b19174b
-655	901	7850825999960415	approotIntercoreComms_HighLevelApp/bin/app	2ffd12607353d4bf
-655	901	7850825999960415	C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/out/ARM-Debug/approotIntercoreComms_HighLevelApp/bin/app	2ffd12607353d4bf
-902	2193	7850826012834600	IntercoreComms_HighLevelApp.imagepackage	dda57ce96db5fb5e
-902	2193	7850826012834600	C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_HighLevelApp/out/ARM-Debug/IntercoreComms_HighLevelApp.imagepackage	dda57ce96db5fb5e
+8	95	7850863605894550	CMakeFiles/IntercoreComms_HighLevelApp.dir/eventloop_timer_utilities.c.obj	334943f8d8bff9ca
+2	98	7850863605836153	CMakeFiles/IntercoreComms_HighLevelApp.dir/main.c.obj	90016ff0411c470e
+98	210	7850863606794782	IntercoreComms_HighLevelApp.out	80d7a3ef5b19174b
+210	324	7850863608999398	approotIntercoreComms_HighLevelApp/bin/app	58ca2d1af4da53c
+210	324	7850863608999398	C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/approotIntercoreComms_HighLevelApp/bin/app	58ca2d1af4da53c
+324	833	7850863613965160	IntercoreComms_HighLevelApp.imagepackage	181706ba4fdc5a02
+324	833	7850863613965160	C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/IntercoreComms_HighLevelApp.imagepackage	181706ba4fdc5a02

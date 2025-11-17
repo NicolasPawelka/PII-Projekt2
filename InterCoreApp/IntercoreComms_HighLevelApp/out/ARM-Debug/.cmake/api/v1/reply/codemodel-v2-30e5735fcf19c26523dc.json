@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "IntercoreComms_RTApp_MT3620_BareMetal",
+					"name" : "IntercoreComms_HighLevelApp",
 					"targetIndexes" : 
 					[
 						0,
@@ -40,15 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "IntercoreComms_RTApp_MT3620_BareMetal::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-IntercoreComms_RTApp_MT3620_BareMetal-Debug-76175160ca318bcfad20.json",
-					"name" : "IntercoreComms_RTApp_MT3620_BareMetal",
+					"id" : "IntercoreComms_HighLevelApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-IntercoreComms_HighLevelApp-Debug-df17a82206af90bb9bdc.json",
+					"name" : "IntercoreComms_HighLevelApp",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "MakeImage::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MakeImage-Debug-5fe3382558167635fc72.json",
+					"jsonFile" : "target-MakeImage-Debug-a9f027c27f98df370b48.json",
 					"name" : "MakeImage",
 					"projectIndex" : 0
 				}
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug",
-		"source" : "C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_RTApp_MT3620_BareMetal"
+		"build" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug",
+		"source" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp"
 	},
 	"version" : 
 	{
