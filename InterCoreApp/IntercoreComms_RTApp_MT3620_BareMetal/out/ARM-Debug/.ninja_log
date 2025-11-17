@@ -1,0 +1,18 @@
+# ninja log v7
+36	283	7850825876141379	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-intercore.c.obj	de3c10173af714d
+25	292	7850825876022741	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-dpc.c.obj	bb26460fb32b933d
+60	330	7850825876364878	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-timer.c.obj	f4352d147d3a851f
+15	353	7850825875898676	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-intercore.c.obj	8f67bb8720050485
+47	356	7850825876247097	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-uart-poll.c.obj	bdbb1d0cb2dcf069
+4	399	7850825875795568	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj	bcb386027013356e
+400	687	7850825879781113	IntercoreComms_RTApp_MT3620_BareMetal.out	a840dea43ddbf11e
+687	950	7850825885155248	approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app	3f5d6611ba014325
+687	950	7850825885155248	C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app	3f5d6611ba014325
+951	2539	7850825900809340	IntercoreComms_RTApp_MT3620_BareMetal.imagepackage	7efc723baebf0cf5
+951	2539	7850825900809340	C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/IntercoreComms_RTApp_MT3620_BareMetal.imagepackage	7efc723baebf0cf5
+59	323	7850833248371750	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj	bcb386027013356e
+325	556	7850833251030314	IntercoreComms_RTApp_MT3620_BareMetal.out	a840dea43ddbf11e
+556	786	7850833255501871	approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app	3f5d6611ba014325
+556	786	7850833255501871	C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app	3f5d6611ba014325
+787	2166	7850833269091436	IntercoreComms_RTApp_MT3620_BareMetal.imagepackage	7efc723baebf0cf5
+787	2166	7850833269091436	C:/Users/phlam/Desktop/PII-Projekt/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/IntercoreComms_RTApp_MT3620_BareMetal.imagepackage	7efc723baebf0cf5
