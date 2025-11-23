@@ -23,8 +23,8 @@ static UART *debug = NULL;
 static UART *driver_Uart = NULL;
 bool *state = false;
 
-#define I2C_ADDR_MOTOR_1 0x0f
-#define I2C_ADDR_MOTOR_2 0x0d
+#define I2C_ADDR_MOTOR_1          0x0f
+#define I2C_ADDR_MOTOR_2          0x0d
 
 #define MotorSpeedSet             0x82
 #define PWMFrequenceSet           0x84
@@ -36,8 +36,8 @@ bool *state = false;
 #define I2CMotorDriverAdd         0x1F
 #define I2CMotor2                 0x0F
 
-#define CMD_MOTOR_A             1
-#define CMD_MOTOR_B             2
+#define CMD_MOTOR_A               1
+#define CMD_MOTOR_B               2
 
 static uint8_t rxBuffer[64];
 static volatile uint32_t rxWritePos = 0;
@@ -138,6 +138,9 @@ static void measure(){
 static void motor_task(void *pParameters)
 {
     UART_Print(debug,"Starte Motor Task");
+    // Wichtig UART Baud Rate auf 9600 da das Grove Shield mit diesem Wert bootet
+    // Öffnen und Schließen des UART Handles führt zu Problemen daher ist das umgehen
+    // der Shield Config sinnvoll
     driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
     
     while(1){
