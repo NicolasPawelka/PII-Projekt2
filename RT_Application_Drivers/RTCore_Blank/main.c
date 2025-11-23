@@ -19,19 +19,9 @@
 #include"Grove_Shield_Driver/include/GroveI2C.h"
 #include"Grove_Shield_Driver/include/GroveUart.h"
 
-
-
-
-
 static UART *debug = NULL;
 static UART *driver_Uart = NULL;
 bool *state = false;
-
-//static UART *driver = NULL;
-static I2CMaster *driver   = NULL;
-static const uint32_t buttonAGpio = 12;
-//static i2c_master_port motor_driver;
-
 
 #define I2C_ADDR_MOTOR_1 0x0f
 #define I2C_ADDR_MOTOR_2 0x0d
@@ -45,10 +35,6 @@ static const uint32_t buttonAGpio = 12;
 
 #define I2CMotorDriverAdd         0x1F
 #define I2CMotor2                 0x0F
-
-
-// #define CMD_MOTOR_A           0xA1
-// #define CMD_MOTOR_B           0xA5
 
 #define CMD_MOTOR_A             1
 #define CMD_MOTOR_B             2
@@ -68,7 +54,7 @@ void MotorSpeedSetAB(uint8_t var) {
 
     uint8_t data[3];
     data[0] = MotorSpeedSet;
-    data[1] = speed;
+    data[1] = 0;
     data[2] = speed;         
 
     int ret = SC18IM700_I2cWrite(driver_Uart, I2CMotor2, data, sizeof(data));
@@ -149,28 +135,21 @@ static void measure(){
 }
 
 
-static void test(){
-    UART* handle = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
-    GroveShield_Initialize(handle,115200);
-    UART_Print(debug,"YEAH Buddy");
-}
-
-
-
-static void gpio_task(void *pParameters)
+static void motor_task(void *pParameters)
 {
-    UART_Print(debug,"Bin in der Task");
-    int counter = 0;
+    UART_Print(debug,"Starte Motor Task");
+    driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
+    
     while(1){
-        UART_Print(debug,"Tick");
-        counter++;
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        MotorSpeedSetAB(50);
+        GetRotatedd(0b1010);
+        vTaskDelay(pdMS_TO_TICKS(500));
+        MotorSpeedSetAB(0);
+        vTaskDelay(pdMS_TO_TICKS(500));
+        
     }
 
 }
-
-
-
 
 _Noreturn void RTCoreMain(void){
     
@@ -182,37 +161,11 @@ _Noreturn void RTCoreMain(void){
     UART_Print(debug, "Hallo\r\n");
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
 
-    //GPIO_Init();
 
-    // int i2cFd;
     
- 
-    // driver = I2CMaster_Open(MT3620_UNIT_ISU3);
-    // if (!driver) {
-    //     UART_Print(debug,
-    //         "ERROR: I2C initialisation failed\r\n");
-    // }
+    xTaskCreate(motor_task, "Motor_Task", 512, NULL, 5, NULL);
+    vTaskStartScheduler();
 
-    // I2CMaster_SetBusSpeed(driver, I2C_BUS_SPEED_STANDARD);
-    
-
-    // xTaskCreate(motor_task, "Motor_Task", 512, NULL, 5, NULL);
-    //xTaskCreate(gpio_task, "BLINKI", 512, NULL, 5, NULL);
-    //vTaskStartScheduler();
-
-    driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
-
-    while(1){
-        MotorSpeedSetAB(50);
-        GetRotatedd(0b1010);
-        for(int i = 0; i < 10000000; ++i){};
-        MotorSpeedSetAB(0);
-        for(int i = 0; i < 10000000; ++i){};
-
-    }
-    
-
-    //GPIO_ConfigurePinForInput(buttonAGpio);
 
     for(;;){
        __asm__("wfi");
