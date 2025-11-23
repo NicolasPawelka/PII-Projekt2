@@ -22,6 +22,7 @@
 
 
 
+
 static UART *debug = NULL;
 static UART *driver_Uart = NULL;
 bool *state = false;
@@ -35,6 +36,16 @@ static const uint32_t buttonAGpio = 12;
 #define I2C_ADDR_MOTOR_1 0x0f
 #define I2C_ADDR_MOTOR_2 0x0d
 
+#define MotorSpeedSet             0x82
+#define PWMFrequenceSet           0x84
+#define DirectionSet              0xaa
+#define MotorSetA                 0xa1
+#define MotorSetB                 0xa5
+#define Nothing                   0x01
+
+#define I2CMotorDriverAdd         0x1F
+#define I2CMotor2                 0x0F
+
 
 // #define CMD_MOTOR_A           0xA1
 // #define CMD_MOTOR_B           0xA5
@@ -42,45 +53,47 @@ static const uint32_t buttonAGpio = 12;
 #define CMD_MOTOR_A             1
 #define CMD_MOTOR_B             2
 
+static uint8_t rxBuffer[64];
+static volatile uint32_t rxWritePos = 0;
+uint8_t data;
 
-void Motor_Set(uint8_t motor, int8_t speed)
+static void RxHandler()
 {
-    uint8_t cmd;
-    uint8_t dir;
-    uint8_t pwm;
-
-    // motor = I2C_ADDR_MOTOR_1 oder I2C_ADDR_MOTOR_2
-    if (motor == I2C_ADDR_MOTOR_1) {
-        cmd = CMD_MOTOR_A;
-    } else if (motor == I2C_ADDR_MOTOR_2) {
-        cmd = CMD_MOTOR_B;
-    } else {
-        UART_Print(debug, "Ungültiger Motor!\r\n");
-        return;
-    }
-
-    // Richtung & Geschwindigkeit umrechnen
-    if (speed > 0) {
-        dir = 0x01; // vorwärts
-        pwm = (speed > 100) ? 100 : speed;
-    } else if (speed < 0) {
-        dir = 0x02; // rückwärts
-        pwm = ((-speed) > 100) ? 100 : (-speed);
-    } else {
-        dir = 0x01; // egal, Geschwindigkeit 0 = stop
-        pwm = 0;
-    }
-     UART_Print(debug, "bis hierhin komme ich\r\n");
-
-    uint8_t data[3] = { cmd, dir, pwm };
-    int32_t result = I2CMaster_WriteSync(driver, I2C_ADDR_MOTOR_2 , data, sizeof(data));
-    UART_Print(debug, "hier hänge ich ich\r\n");
-
-    if (result != ERROR_NONE) {
-        UART_Print(debug, "Fehler beim Senden über I2C!\r\n");
-        UART_Printf(debug,"Folgender Fehler aufgestreten: %ld",result);
-    }
+    rxBuffer[rxWritePos++ & 63] = data;
 }
+
+
+void MotorSpeedSetAB(uint8_t var) {
+    uint8_t speed = var;
+
+    uint8_t data[3];
+    data[0] = MotorSpeedSet;
+    data[1] = speed;
+    data[2] = speed;         
+
+    int ret = SC18IM700_I2cWrite(driver_Uart, I2CMotor2, data, sizeof(data));
+
+    while(!ret){
+        // do nothing
+    }
+
+}
+
+void GetRotatedd(uint8_t dir){
+
+    uint8_t data[2];
+    data[0] = DirectionSet;
+    data[1] = dir;   
+
+    int ret = SC18IM700_I2cWrite(driver_Uart,I2CMotor2,data,sizeof(data));
+
+    while(!ret){
+        //do nothing
+    }
+
+}
+
+
 
 void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
 {
@@ -137,8 +150,8 @@ static void measure(){
 
 
 static void test(){
-    UART* handle = UART_Open(MT3620_UNIT_ISU0,115200,UART_PARITY_NONE,1,NULL);
-    GroveShield_Initialize(handle,230400);
+    UART* handle = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
+    GroveShield_Initialize(handle,115200);
     UART_Print(debug,"YEAH Buddy");
 }
 
@@ -156,36 +169,6 @@ static void gpio_task(void *pParameters)
 
 }
 
-static void motor_task(void *param)
-{
-    while (1) {
-        UART_Print(debug, "Motor A vorwärts\r\n");
-        Motor_Set(I2C_ADDR_MOTOR_2, 80);
-        vTaskDelay(pdMS_TO_TICKS(2000));
-
-        UART_Print(debug, "Motor A rückwärts\r\n");
-        Motor_Set(I2C_ADDR_MOTOR_2, -80);
-        vTaskDelay(pdMS_TO_TICKS(2000));
-
-        UART_Print(debug, "Motor A stop\r\n");
-        Motor_Set(I2C_ADDR_MOTOR_2, 0);
-        vTaskDelay(pdMS_TO_TICKS(1000));
-
-
-
-        // UART_Print(debug, "Motor B vorwärts\r\n");
-        // Motor_Set(I2C_ADDR_MOTOR_2, 80);
-        // vTaskDelay(pdMS_TO_TICKS(2000));
-
-        // UART_Print(debug, "Motor B rückwärts\r\n");
-        // Motor_Set(I2C_ADDR_MOTOR_2, -80);
-        // vTaskDelay(pdMS_TO_TICKS(2000));
-
-        // UART_Print(debug, "Motor B stop\r\n");
-        // Motor_Set(I2C_ADDR_MOTOR_2, 0);
-        // vTaskDelay(pdMS_TO_TICKS(1000));
-    }
-}
 
 
 
@@ -217,7 +200,17 @@ _Noreturn void RTCoreMain(void){
     //xTaskCreate(gpio_task, "BLINKI", 512, NULL, 5, NULL);
     //vTaskStartScheduler();
 
-    test();
+    driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
+
+    while(1){
+        MotorSpeedSetAB(50);
+        GetRotatedd(0b1010);
+        for(int i = 0; i < 10000000; ++i){};
+        MotorSpeedSetAB(0);
+        for(int i = 0; i < 10000000; ++i){};
+
+    }
+    
 
     //GPIO_ConfigurePinForInput(buttonAGpio);
 

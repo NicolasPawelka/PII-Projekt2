@@ -46,7 +46,7 @@ static void wait_for_i2cState_ok(UART* handle){
 
 
 
-static void SC18IM700_I2cWrite(UART* handle, uint8_t address, const uint8_t* data, int dataSize)
+bool SC18IM700_I2cWrite(UART* handle, uint8_t address, const uint8_t* data, int dataSize)
 {	
 	// Send
 	uint8_t send[3 + dataSize + 1];
@@ -61,6 +61,9 @@ static void SC18IM700_I2cWrite(UART* handle, uint8_t address, const uint8_t* dat
     UART_Write(handle,send, (int)sizeof(send));
 
 	wait_for_i2cState_ok(handle);
+
+	return true;
+	
 }
 
 static bool SC18IM700_I2cRead(UART* handle, uint8_t address, uint8_t* data, int dataSize)
@@ -90,7 +93,7 @@ bool SC18IM700_ReadReg(UART* handle, uint8_t reg, uint8_t* data)
 	// Send
 
 	uint8_t send[3];
-	UART* debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
+	//UART* debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
 
 	send[0] = 'R';
 	send[1] = reg;
@@ -116,6 +119,12 @@ bool SC18IM700_ReadReg(UART* handle, uint8_t reg, uint8_t* data)
   
 
 	// Receive
+
+	// while (!(MT3620_UART_FIELD_READ(handle->id, lsr, dr))) { }
+	// *data = (uint8_t)mt3620_uart[handle->id]->rbr;
+
+
+
 
     if(UART_Read(handle,data,1) != ERROR_NONE){
         return false;
@@ -157,7 +166,7 @@ void SC18IM700_WriteRegBytes(UART* handle, uint8_t *data, uint8_t dataSize)
     
 }
 
-void(*GroveI2C_Write)(UART* handle, uint8_t address, const uint8_t* data, int dataSize) = SC18IM700_I2cWrite;
+bool(*GroveI2C_Write)(UART* handle, uint8_t address, const uint8_t* data, int dataSize) = SC18IM700_I2cWrite;
 bool(*GroveI2C_Read)(UART* handle, uint8_t address, uint8_t* data, int dataSize) = SC18IM700_I2cRead;
 
 
@@ -221,9 +230,11 @@ static void baudrate_conf(UART* handle, unsigned int baudrate)
 	static uint8_t trial = 0;
 	uint8_t d0, d1;
 	uint8_t conf[4] = { 0 };
-
-    UART_Close(handle);
-	handle = UART_Open(MT3620_UNIT_ISU0, 9600,UART_PARITY_NONE,1,NULL);
+	SC18IM700_ReadReg(handle, 0x00, &d0);
+    // UART_Close(handle);
+	UART* tmp  = UART_Open(MT3620_UNIT_ISU0, 9600,UART_PARITY_NONE,1,NULL);
+	// handle = tmp;
+	// SC18IM700_ReadReg(tmp, 0x00, &d0);
 
 	while (true)
 	{
