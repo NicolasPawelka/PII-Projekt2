@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include "VectorTable.h"
 
+
 #include "lib/UART.h"
 #include "lib/Print.h"
 #include "lib/CPUFreq.h"
@@ -22,6 +23,8 @@
 static UART *debug = NULL;
 static UART *driver_Uart = NULL;
 bool *state = false;
+TaskHandle_t task1Handle = NULL;
+TaskHandle_t task2Handle = NULL;
 
 #define I2C_ADDR_MOTOR_1          0x0f
 #define I2C_ADDR_MOTOR_2          0x0d
@@ -39,30 +42,114 @@ bool *state = false;
 #define CMD_MOTOR_A               1
 #define CMD_MOTOR_B               2
 
+
+#define US_PIN 0
+static const uintptr_t GPT_BASE = 0x21030000;
+
 static uint8_t rxBuffer[64];
 static volatile uint32_t rxWritePos = 0;
 uint8_t data;
+
+void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
+{
+    for(;;);
+}
 
 static void RxHandler()
 {
     rxBuffer[rxWritePos++ & 63] = data;
 }
 
+void WriteReg32(uintptr_t baseAddr, size_t offset, uint32_t value){
+    *(volatile uint32_t*)(baseAddr + offset) = value;
+}
+
+uint32_t ReadReg32(uintptr_t baseAddr, size_t offset)
+{
+	return *(volatile uint32_t*)(baseAddr + offset);
+}
+
+
+void Gpt3_WaitUs(int microseconds)
+{
+	// GPT3_INIT = initial counter value
+	WriteReg32(GPT_BASE, 0x54, 0x0);
+    
+
+	// GPT3_CTRL
+	uint32_t ctrlOn = 0x0;
+	ctrlOn |= (0x19) << 16; // OSC_CNT_1US (default value)
+	ctrlOn |= 0x1;          // GPT3_EN = 1 -> GPT3 enabled
+	WriteReg32(GPT_BASE, 0x50, ctrlOn);
+
+	// GPT3_CNT
+	while (ReadReg32(GPT_BASE, 0x58) < microseconds)
+	{
+		// empty.
+	}
+
+	// GPT_CTRL -> disable timer
+	WriteReg32(GPT_BASE, 0x50, 0x0);
+}
 
 void MotorSpeedSetAB(uint8_t var) {
     uint8_t speed = var;
 
     uint8_t data[3];
     data[0] = MotorSpeedSet;
-    data[1] = 0;
-    data[2] = speed;         
+    data[1] = speed;
+    data[2] = speed; 
+    
 
-    int ret = SC18IM700_I2cWrite(driver_Uart, I2CMotor2, data, sizeof(data));
+    int ret1 = SC18IM700_I2cWrite(driver_Uart, I2CMotor2, data, sizeof(data));
+    vTaskDelay(pdMS_TO_TICKS(50));
+    int ret2 = SC18IM700_I2cWrite(driver_Uart, I2CMotorDriverAdd, data, sizeof(data));
 
-    while(!ret){
+    while(!ret1 || !ret2){
         // do nothing
     }
 
+}
+
+float measure(void)
+{
+    bool echo = false;
+    unsigned long long t_start = 0, t_end = 0;
+    uint32_t pulseBegin,pulseEnd;
+
+    GPIO_ConfigurePinForOutput(US_PIN);
+    GPIO_Write(US_PIN, false);
+    Gpt3_WaitUs(2);
+    GPIO_Write(US_PIN, true);
+    Gpt3_WaitUs(5);
+    
+    // GPT3_CTRL - starts microsecond resolution clock
+	uint32_t ctrlOn = 0x0;
+	ctrlOn |= (0x19) << 16; // OSC_CNT_1US (default value)
+	ctrlOn |= 0x1;          // GPT3_EN = 1 -> GPT3 enabled
+	WriteReg32(GPT_BASE, 0x50, ctrlOn);
+    
+
+    GPIO_ConfigurePinForInput(US_PIN);
+
+    
+
+    do {
+        GPIO_Read(US_PIN, &echo);
+    } while (!echo);
+
+    pulseBegin = ReadReg32(GPT_BASE, 0x58);
+    
+    do {
+        GPIO_Read(US_PIN, &echo);
+    } while (echo);
+
+    pulseEnd = ReadReg32(GPT_BASE, 0x58);
+
+	// GPT_CTRL -> disable timer
+	WriteReg32(GPT_BASE, 0x50, 0x0);
+
+	return (pulseEnd - pulseBegin) / 58.0;
 }
 
 void GetRotatedd(uint8_t dir){
@@ -71,9 +158,10 @@ void GetRotatedd(uint8_t dir){
     data[0] = DirectionSet;
     data[1] = dir;   
 
-    int ret = SC18IM700_I2cWrite(driver_Uart,I2CMotor2,data,sizeof(data));
-
-    while(!ret){
+    int ret1 = SC18IM700_I2cWrite(driver_Uart,I2CMotor2,data,sizeof(data));
+    int ret2 = SC18IM700_I2cWrite(driver_Uart,I2CMotorDriverAdd,data,sizeof(data));
+    
+    while(!ret1 || !ret2){
         //do nothing
     }
 
@@ -81,10 +169,6 @@ void GetRotatedd(uint8_t dir){
 
 
 
-void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
-{
-    for(;;);
-}
 
 
 static void GPIO_Init(){
@@ -105,32 +189,23 @@ static void GPIO_Init(){
 
 }
 
-static void measure(){
 
-    GPIO_Write(0,true);
-    vTaskDelay(pdMS_TO_TICKS(0.01));
-    GPIO_Write(0,false);
-    // unsigned long long timestamp_1 = get_current_system_us();
+static void gpio_task(void *pParameters)
+{
+    float dist = 0;
+    while(1){
 
+        dist = measure();
+        UART_Printf(debug,"Aktuelle Distanz %f\r\n",dist);
+        
+        if (dist > 30){
+            xTaskNotify(task2Handle, 0x01, eSetBits);
+        }else{
+            xTaskNotify(task2Handle, 0x02 , eSetBits);
+        }
 
-    int ret = GPIO_ConfigurePinForInput(0);
-    if(ret != ERROR_NONE){
-        UART_Print(debug,"Fehler beim umschalten"); 
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
-
-    while(*state == false){
-        GPIO_Read(0,state);
-    }
-    // unsigned long long timestamp_2 = get_current_system_us();
-
-    // unsigned long long pulse = timestamp_2 - timestamp_1;
-
-    // float distance = pulse / 58.0f;
-
-
-    UART_Print(debug,"%f");
-
-
 
 }
 
@@ -142,13 +217,26 @@ static void motor_task(void *pParameters)
     // Öffnen und Schließen des UART Handles führt zu Problemen daher ist das umgehen
     // der Shield Config sinnvoll
     driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
-    
+    uint32_t notificationValue;
     while(1){
-        MotorSpeedSetAB(50);
-        GetRotatedd(0b1010);
-        vTaskDelay(pdMS_TO_TICKS(500));
-        MotorSpeedSetAB(0);
-        vTaskDelay(pdMS_TO_TICKS(500));
+        BaseType_t result = xTaskNotifyWait(0x00, 0x07,&notificationValue, portMAX_DELAY);
+
+        if (result == pdPASS){
+            if(notificationValue & 0x01){
+                UART_Print(debug,"Sicher zum Fahren");
+                MotorSpeedSetAB(25);
+                GetRotatedd(0b1010);
+                vTaskDelay(pdMS_TO_TICKS(500));
+                MotorSpeedSetAB(0);
+                vTaskDelay(pdMS_TO_TICKS(500));
+            }else if(notificationValue & 0x02){
+                UART_Print(debug,"STOP");
+            }
+
+        }
+
+
+        
         
     }
 
@@ -165,8 +253,8 @@ _Noreturn void RTCoreMain(void){
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
 
 
-    
-    xTaskCreate(motor_task, "Motor_Task", 512, NULL, 5, NULL);
+    xTaskCreate(gpio_task, "GPIO_Task",2048,NULL,5,&task1Handle);
+    xTaskCreate(motor_task, "Motor_Task", 2048, NULL, 5, &task2Handle);
     vTaskStartScheduler();
 
 
