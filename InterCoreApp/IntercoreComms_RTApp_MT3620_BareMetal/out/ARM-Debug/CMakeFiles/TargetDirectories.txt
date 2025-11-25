@@ -1,4 +1,0 @@
-C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir
-C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/MakeImage.dir
-C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/edit_cache.dir
-C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/rebuild_cache.dir
