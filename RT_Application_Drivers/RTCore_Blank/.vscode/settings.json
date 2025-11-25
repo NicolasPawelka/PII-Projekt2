@@ -23,6 +23,8 @@
         "unistd.h": "c",
         "exception": "c",
         "new": "c",
-        "i2cmaster.h": "c"
+        "i2cmaster.h": "c",
+        "mt3620-baremetal.h": "c",
+        "logical-intercore.h": "c"
     }
 }

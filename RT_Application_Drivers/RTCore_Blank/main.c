@@ -14,8 +14,14 @@
 
 #include "nvic.h"
 #include"timers.h"
-#include"timer.h"
 #include"Common.h"
+
+#include "logical-dpc.h"
+#include "logical-intercore.h"
+
+#include "mt3620-baremetal.h"
+#include "mt3620-intercore.h"
+#include "mt3620-timer.h"
 
 #include"Grove_Shield_Driver/include/GroveI2C.h"
 #include"Grove_Shield_Driver/include/GroveUart.h"
@@ -25,6 +31,17 @@ static UART *driver_Uart = NULL;
 bool *state = false;
 TaskHandle_t task1Handle = NULL;
 TaskHandle_t task2Handle = NULL;
+
+
+static IntercoreComm icc;
+static const uint32_t sendIntervalMs = 1000;
+// High-Level-App Component ID
+static const ComponentId hlAppId = {
+    .data1 = 0xc910d996,
+    .data2 = 0xd180,
+    .data3 = 0x4702,
+    .data4 = {0x8b, 0x85, 0xa6, 0xc7, 0x01, 0x5c, 0x8c, 0x45}
+};
 
 #define I2C_ADDR_MOTOR_1          0x0f
 #define I2C_ADDR_MOTOR_2          0x0d
@@ -60,14 +77,14 @@ static void RxHandler()
     rxBuffer[rxWritePos++ & 63] = data;
 }
 
-void WriteReg32(uintptr_t baseAddr, size_t offset, uint32_t value){
-    *(volatile uint32_t*)(baseAddr + offset) = value;
-}
+// void WriteReg32(uintptr_t baseAddr, size_t offset, uint32_t value){
+//     *(volatile uint32_t*)(baseAddr + offset) = value;
+// }
 
-uint32_t ReadReg32(uintptr_t baseAddr, size_t offset)
-{
-	return *(volatile uint32_t*)(baseAddr + offset);
-}
+// uint32_t ReadReg32(uintptr_t baseAddr, size_t offset)
+// {
+// 	return *(volatile uint32_t*)(baseAddr + offset);
+// }
 
 
 void Gpt3_WaitUs(int microseconds)
@@ -238,6 +255,26 @@ static void motor_task(void *pParameters)
 
 }
 
+
+static void HandleSendTimerDeferred(void)
+{
+    static char msg[] = "RT->HL";
+    IntercoreSend(&icc, &hlAppId, msg, sizeof(msg) - 1);
+    UART_Print(debug,"Nachrciht gesendet");
+
+}
+
+
+static void send_task(void *pParameters){
+
+    while(1){
+        HandleSendTimerDeferred();
+        vTaskDelay(pdMS_TO_TICKS(2000));
+    }
+
+
+}
+
 _Noreturn void RTCoreMain(void){
     
     VectorTableInit();
@@ -249,8 +286,9 @@ _Noreturn void RTCoreMain(void){
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
 
 
-    xTaskCreate(gpio_task, "GPIO_Task",2048,NULL,5,&task1Handle);
-    xTaskCreate(motor_task, "Motor_Task", 2048, NULL, 5, &task2Handle);
+    // xTaskCreate(gpio_task, "GPIO_Task",2048,NULL,5,&task1Handle);
+    // xTaskCreate(motor_task, "Motor_Task", 2048, NULL, 5, &task2Handle);
+    xTaskCreate(send_task,"Send_Task",2048,NULL,5,NULL);
     vTaskStartScheduler();
 
 

@@ -23,6 +23,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/MT3620_M4_BSP/FreeRTOS/portable
     ${CMAKE_SOURCE_DIR}/lib
     ${CMAKE_SOURCE_DIR}/Grove_Shield_Driver/include
+    ${CMAKE_SOURCE_DIR}/Intercore
    
 )
 
@@ -44,7 +45,10 @@ set(APP_SRC
     ${CMAKE_SOURCE_DIR}/lib/I2CMaster.c
     ${CMAKE_SOURCE_DIR}/Grove_Shield_Driver/src/GroveUART.c
     ${CMAKE_SOURCE_DIR}/Grove_Shield_Driver/src/Grove_I2C.c
-
+    ${CMAKE_SOURCE_DIR}/Intercore/logical-intercore.c
+    ${CMAKE_SOURCE_DIR}/Intercore/mt3620-intercore.c
+    ${CMAKE_SOURCE_DIR}/Intercore/logical-dpc.c
+    ${CMAKE_SOURCE_DIR}/Intercore/mt3620-timer.c
 )
 
 # --- Executable ---

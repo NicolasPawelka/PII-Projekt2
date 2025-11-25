@@ -1,14 +1,8 @@
 # ninja log v7
-10	105	7857604641483699	CMakeFiles/IntercoreComms_HighLevelApp.dir/eventloop_timer_utilities.c.obj	2d947d2fa1d6f893
-3	112	7857604641466311	CMakeFiles/IntercoreComms_HighLevelApp.dir/main.c.obj	b0d33ff47c934f0c
-112	221	7857604642530297	IntercoreComms_HighLevelApp.out	80d7a3ef5b19174b
-221	344	7857604644787607	approotIntercoreComms_HighLevelApp/bin/app	9b6857a2cad05950
-221	344	7857604644787607	C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/approotIntercoreComms_HighLevelApp/bin/app	9b6857a2cad05950
-344	823	7857604649481460	IntercoreComms_HighLevelApp.imagepackage	c87c06d24c6ee1f0
-344	823	7857604649481460	C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/IntercoreComms_HighLevelApp.imagepackage	c87c06d24c6ee1f0
-5	120	7857613399696402	CMakeFiles/IntercoreComms_HighLevelApp.dir/main.c.obj	b0d33ff47c934f0c
-121	237	7857613400845909	IntercoreComms_HighLevelApp.out	80d7a3ef5b19174b
-237	361	7857613403146911	approotIntercoreComms_HighLevelApp/bin/app	9b6857a2cad05950
-237	361	7857613403146911	C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/approotIntercoreComms_HighLevelApp/bin/app	9b6857a2cad05950
-362	825	7857613407646288	IntercoreComms_HighLevelApp.imagepackage	c87c06d24c6ee1f0
-362	825	7857613407646288	C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/IntercoreComms_HighLevelApp.imagepackage	c87c06d24c6ee1f0
+14	143	7857643803139198	CMakeFiles/IntercoreComms_HighLevelApp.dir/eventloop_timer_utilities.c.obj	7c237fc83fb7c0c
+4	153	7857643802953767	CMakeFiles/IntercoreComms_HighLevelApp.dir/main.c.obj	1f4bad002c8278a0
+154	317	7857643804556187	IntercoreComms_HighLevelApp.out	80d7a3ef5b19174b
+317	490	7857643807791470	approotIntercoreComms_HighLevelApp/bin/app	5846cd233a4db78
+317	490	7857643807791470	C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/approotIntercoreComms_HighLevelApp/bin/app	5846cd233a4db78
+490	1171	7857643814443111	IntercoreComms_HighLevelApp.imagepackage	3f110849326220bb
+490	1171	7857643814443111	C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/IntercoreComms_HighLevelApp.imagepackage	3f110849326220bb

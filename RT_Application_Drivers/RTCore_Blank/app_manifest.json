@@ -6,7 +6,10 @@
   "CmdArgs": [],
   "Capabilities": {
     "Uart": ["ISU0","ISU3"],
-    "Gpio": [0,8,15,18,21]
+    "Gpio": [0,8,15,18,21],
+    "AllowedApplicationConnections": [
+      "c910d996-d180-4702-8b85-a6c7015c8c45"
+    ]
   },
   "ApplicationType": "RealTimeCapable"
 }
