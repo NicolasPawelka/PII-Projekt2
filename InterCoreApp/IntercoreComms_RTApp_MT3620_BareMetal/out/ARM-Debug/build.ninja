@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/
+cmake_ninja_workdir = C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target IntercoreComms_RTApp_MT3620_BareMetal
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCore
 
 build cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal: phony || .
 
-build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/main.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
+build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/main.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
   CONFIG = Debug
   DEP_FILE = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir\main.c.obj.d
   FLAGS = -mcpu=cortex-m4 -g -std=c11 -Wall -ggdb -O0
@@ -57,7 +57,7 @@ build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj: C_COMPILE
   OBJECT_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
   OBJECT_FILE_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
 
-build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-intercore.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/logical-intercore.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
+build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-intercore.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/logical-intercore.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
   CONFIG = Debug
   DEP_FILE = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir\logical-intercore.c.obj.d
   FLAGS = -mcpu=cortex-m4 -g -std=c11 -Wall -ggdb -O0
@@ -65,7 +65,7 @@ build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-intercore.c.o
   OBJECT_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
   OBJECT_FILE_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
 
-build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-dpc.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/logical-dpc.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
+build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-dpc.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/logical-dpc.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
   CONFIG = Debug
   DEP_FILE = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir\logical-dpc.c.obj.d
   FLAGS = -mcpu=cortex-m4 -g -std=c11 -Wall -ggdb -O0
@@ -73,7 +73,7 @@ build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-dpc.c.obj: C_
   OBJECT_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
   OBJECT_FILE_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
 
-build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-intercore.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/mt3620-intercore.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
+build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-intercore.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/mt3620-intercore.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
   CONFIG = Debug
   DEP_FILE = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir\mt3620-intercore.c.obj.d
   FLAGS = -mcpu=cortex-m4 -g -std=c11 -Wall -ggdb -O0
@@ -81,7 +81,7 @@ build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-intercore.c.ob
   OBJECT_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
   OBJECT_FILE_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
 
-build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-uart-poll.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/mt3620-uart-poll.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
+build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-uart-poll.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/mt3620-uart-poll.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
   CONFIG = Debug
   DEP_FILE = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir\mt3620-uart-poll.c.obj.d
   FLAGS = -mcpu=cortex-m4 -g -std=c11 -Wall -ggdb -O0
@@ -89,7 +89,7 @@ build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-uart-poll.c.ob
   OBJECT_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
   OBJECT_FILE_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
 
-build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-timer.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/mt3620-timer.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
+build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-timer.c.obj: C_COMPILER__IntercoreComms_RTApp_MT3620_BareMetal_unscanned_Debug C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/mt3620-timer.c || cmake_object_order_depends_target_IntercoreComms_RTApp_MT3620_BareMetal
   CONFIG = Debug
   DEP_FILE = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir\mt3620-timer.c.obj.d
   FLAGS = -mcpu=cortex-m4 -g -std=c11 -Wall -ggdb -O0
@@ -105,10 +105,10 @@ build CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-timer.c.obj: C
 #############################################
 # Link the executable IntercoreComms_RTApp_MT3620_BareMetal.out
 
-build IntercoreComms_RTApp_MT3620_BareMetal.out: C_EXECUTABLE_LINKER__IntercoreComms_RTApp_MT3620_BareMetal_Debug CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-intercore.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-dpc.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-intercore.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-uart-poll.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-timer.c.obj | C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld
+build IntercoreComms_RTApp_MT3620_BareMetal.out: C_EXECUTABLE_LINKER__IntercoreComms_RTApp_MT3620_BareMetal_Debug CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-intercore.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-dpc.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-intercore.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-uart-poll.c.obj CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-timer.c.obj | C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld
   CONFIG = Debug
   FLAGS = -mcpu=cortex-m4 -g
-  LINK_FLAGS = -nostartfiles -Wl,--no-undefined -Wl,-n -T "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld"
+  LINK_FLAGS = -nostartfiles -Wl,--no-undefined -Wl,-n -T "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld"
   OBJECT_DIR = CMakeFiles\IntercoreComms_RTApp_MT3620_BareMetal.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -126,7 +126,7 @@ build MakeImage: phony CMakeFiles/MakeImage IntercoreComms_RTApp_MT3620_BareMeta
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug && "C:\Program Files\CMake\bin\cmake-gui.exe" -SC:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal -BC:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\phlam\Desktop\Master Studium\1. Semester WS 2526\PII\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug" && "C:\Program Files\CMake\bin\cmake-gui.exe" -S"C:\Users\phlam\Desktop\Master Studium\1. Semester WS 2526\PII\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal" -B"C:\Users\phlam\Desktop\Master Studium\1. Semester WS 2526\PII\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug""
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -138,7 +138,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -SC:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal -BC:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\phlam\Desktop\Master Studium\1. Semester WS 2526\PII\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug" && "C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Users\phlam\Desktop\Master Studium\1. Semester WS 2526\PII\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal" -B"C:\Users\phlam\Desktop\Master Studium\1. Semester WS 2526\PII\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -155,8 +155,8 @@ build CMakeFiles/MakeImage | ${cmake_ninja_workdir}CMakeFiles/MakeImage: phony I
 #############################################
 # Custom command for IntercoreComms_RTApp_MT3620_BareMetal.imagepackage
 
-build IntercoreComms_RTApp_MT3620_BareMetal.imagepackage | ${cmake_ninja_workdir}IntercoreComms_RTApp_MT3620_BareMetal.imagepackage: CUSTOM_COMMAND C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/app_manifest.json approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app || IntercoreComms_RTApp_MT3620_BareMetal.out
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug && "C:\Program Files (x86)\Microsoft Azure Sphere SDK\SDKTools\ImagePackage\ImagePackage.exe" pack-application --application-manifest C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/app_manifest.json --package-directory C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal --destination C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/IntercoreComms_RTApp_MT3620_BareMetal.imagepackage --output-format classic"
+build IntercoreComms_RTApp_MT3620_BareMetal.imagepackage | ${cmake_ninja_workdir}IntercoreComms_RTApp_MT3620_BareMetal.imagepackage: CUSTOM_COMMAND C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/app_manifest.json approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app || IntercoreComms_RTApp_MT3620_BareMetal.out
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\phlam\Desktop\Master Studium\1. Semester WS 2526\PII\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug" && "C:\Program Files (x86)\Microsoft Azure Sphere SDK\SDKTools\ImagePackage\ImagePackage.exe" pack-application --application-manifest "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/app_manifest.json" --package-directory "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal" --destination "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/IntercoreComms_RTApp_MT3620_BareMetal.imagepackage" --output-format classic"
   DESC = Generating IntercoreComms_RTApp_MT3620_BareMetal.imagepackage
   restat = 1
 
@@ -165,7 +165,7 @@ build IntercoreComms_RTApp_MT3620_BareMetal.imagepackage | ${cmake_ninja_workdir
 # Custom command for approotIntercoreComms_RTApp_MT3620_BareMetal\bin\app
 
 build approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app | ${cmake_ninja_workdir}approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app: CUSTOM_COMMAND IntercoreComms_RTApp_MT3620_BareMetal.out || IntercoreComms_RTApp_MT3620_BareMetal.out
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\phlam\Desktop\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin && "C:\Program Files\CMake\bin\cmake.exe" -E copy C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/IntercoreComms_RTApp_MT3620_BareMetal.out C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app && "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin\arm-none-eabi-strip.exe" --strip-unneeded C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\phlam\Desktop\Master Studium\1. Semester WS 2526\PII\PII-Projekt\PII-Projekt2\InterCoreApp\IntercoreComms_RTApp_MT3620_BareMetal\out\ARM-Debug" && "C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin" && "C:\Program Files\CMake\bin\cmake.exe" -E copy "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/IntercoreComms_RTApp_MT3620_BareMetal.out" "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app" && "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin\arm-none-eabi-strip.exe" --strip-unneeded "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app""
   DESC = Generating approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app
   restat = 1
 
@@ -180,7 +180,7 @@ build IntercoreComms_RTApp_MT3620_BareMetal: phony IntercoreComms_RTApp_MT3620_B
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug
+# Folder: C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug
 
 build all: phony IntercoreComms_RTApp_MT3620_BareMetal.out MakeImage
 
@@ -191,14 +191,14 @@ build all: phony IntercoreComms_RTApp_MT3620_BareMetal.out MakeImage
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereInternal.cmake C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereRTCoreToolchain.cmake C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereToolchainBase.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Generic.cmake C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/CMakeLists.txt CMakeCache.txt CMakeFiles/4.1.2/CMakeCCompiler.cmake CMakeFiles/4.1.2/CMakeSystem.cmake
+build build.ninja C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/cmake_install.cmake: RERUN_CMAKE | C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereInternal.cmake C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereRTCoreToolchain.cmake C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereToolchainBase.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Generic.cmake C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/CMakeLists.txt CMakeCache.txt CMakeFiles/4.1.2/CMakeCCompiler.cmake CMakeFiles/4.1.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereInternal.cmake C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereRTCoreToolchain.cmake C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereToolchainBase.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Generic.cmake C$:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/CMakeLists.txt CMakeCache.txt CMakeFiles/4.1.2/CMakeCCompiler.cmake CMakeFiles/4.1.2/CMakeSystem.cmake: phony
+build C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereInternal.cmake C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereRTCoreToolchain.cmake C$:/Program$ Files$ (x86)/Microsoft$ Azure$ Sphere$ SDK/CMakeFiles/AzureSphereToolchainBase.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake C$:/Program$ Files/CMake/share/cmake-4.1/Modules/Platform/Generic.cmake C$:/Users/phlam/Desktop/Master$ Studium/1.$ Semester$ WS$ 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/CMakeLists.txt CMakeCache.txt CMakeFiles/4.1.2/CMakeCCompiler.cmake CMakeFiles/4.1.2/CMakeSystem.cmake: phony
 
 
 #############################################

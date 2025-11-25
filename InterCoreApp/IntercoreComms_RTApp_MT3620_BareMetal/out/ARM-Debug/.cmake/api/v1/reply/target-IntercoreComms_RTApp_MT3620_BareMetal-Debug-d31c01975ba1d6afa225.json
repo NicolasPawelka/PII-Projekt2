@@ -118,7 +118,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-nostartfiles -Wl,--no-undefined -Wl,-n -T \"C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld\"",
+				"fragment" : "-nostartfiles -Wl,--no-undefined -Wl,-n -T \"C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld\"",
 				"role" : "flags"
 			}
 		],

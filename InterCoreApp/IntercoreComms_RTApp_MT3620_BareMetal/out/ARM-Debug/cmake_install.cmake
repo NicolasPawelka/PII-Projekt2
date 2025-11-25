@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal
+# Install script for directory: C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/install/ARM-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/install/ARM-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/install_local_manifest.txt"
+  file(WRITE "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

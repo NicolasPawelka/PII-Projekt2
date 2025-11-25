@@ -1,4 +1,4 @@
-C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir
-C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/MakeImage.dir
-C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/edit_cache.dir
-C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir
+C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/MakeImage.dir
+C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/edit_cache.dir
+C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/rebuild_cache.dir

@@ -41,7 +41,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "IntercoreComms_RTApp_MT3620_BareMetal::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-IntercoreComms_RTApp_MT3620_BareMetal-Debug-f1a0ad6d13b0ea155295.json",
+					"jsonFile" : "target-IntercoreComms_RTApp_MT3620_BareMetal-Debug-d31c01975ba1d6afa225.json",
 					"name" : "IntercoreComms_RTApp_MT3620_BareMetal",
 					"projectIndex" : 0
 				},
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug",
-		"source" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal"
+		"build" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug",
+		"source" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal"
 	},
 	"version" : 
 	{

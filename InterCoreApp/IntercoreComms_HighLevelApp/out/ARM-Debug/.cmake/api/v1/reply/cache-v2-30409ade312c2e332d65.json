@@ -2,42 +2,6 @@
 	"entries" : 
 	[
 		{
-			"name" : "ARM_GNU_BASE_PATH",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to the ARM embedded toolset"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10"
-		},
-		{
-			"name" : "ARM_GNU_FIND_PATH",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Path to a program."
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe"
-		},
-		{
-			"name" : "ARM_GNU_PATH",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
-		},
-		{
 			"name" : "AS_INT_ACTUAL_LATEST_BETA",
 			"properties" : 
 			[
@@ -71,7 +35,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "RTApp"
+			"value" : "HLApp"
 		},
 		{
 			"name" : "AS_INT_CONFIGURED_API_SET",
@@ -91,11 +55,35 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "API set used to build the applicaiton."
+					"value" : "API set used to build the application."
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "ignored-for-rtapp"
+			"value" : "17"
+		},
+		{
+			"name" : "AS_INT_USER_API_SET",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "API set explicitly requested by the user."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "latest-lts"
+		},
+		{
+			"name" : "AZURE_SPHERE_API_SET_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the selected API set in the Azure Sphere SDK"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17"
 		},
 		{
 			"name" : "AZURE_SPHERE_MAKE_IMAGE_FILE",
@@ -122,6 +110,18 @@
 			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK"
 		},
 		{
+			"name" : "AZURE_SPHERE_TARGET_API_SET",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "UNINITIALIZED",
+			"value" : "latest-lts"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -135,7 +135,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-addr2line.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-addr2line.exe"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -143,11 +143,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to the AR compiler in the ARM embedded toolset targeting Real-Time Core"
+					"value" : "Path to the archiver in the selected API set targeting High-Level core"
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ar.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-ar.exe"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -171,7 +171,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug"
+			"value" : "c:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -251,11 +251,11 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to the C++ compiler in the ARM embedded toolset targeting Real-Time Core"
+					"value" : "Path to the C++ compiler in the selected API set targeting High-Level core"
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-g++.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-g++.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -267,11 +267,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to the C compiler in the ARM embedded toolset targeting Real-Time Core"
+					"value" : "Path to the C compiler in the selected API set targeting High-Level core"
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-gcc.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -287,7 +287,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ar.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-gcc-ar.exe"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -303,7 +303,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc-ranlib.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-gcc-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -319,7 +319,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-mcpu=cortex-m4"
+			"value" : "-B \"C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc\" -march=armv7ve -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard     -mcpu=cortex-a7 --sysroot=\"C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17\""
 		},
 		{
 			"name" : "CMAKE_C_FLAGS_DEBUG",
@@ -439,7 +439,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "-nostartfiles -Wl,--no-undefined -Wl,-n -T \"C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld\""
+			"value" : "-nodefaultlibs -pie -Wl,--no-undefined -Wl,--gc-sections"
 		},
 		{
 			"name" : "CMAKE_EXE_LINKER_FLAGS_DEBUG",
@@ -559,7 +559,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -619,7 +619,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal"
+			"value" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -631,7 +631,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/install/ARM-Debug"
+			"value" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/install/ARM-Debug"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ld.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-ld.exe"
 		},
 		{
 			"name" : "CMAKE_LIST_FILE_NAME",
@@ -771,7 +771,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-nm.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-nm.exe"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -799,7 +799,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-objcopy.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-objcopy.exe"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -815,7 +815,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-objdump.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-objdump.exe"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "IntercoreComms_RTApp_MT3620_BareMetal"
+			"value" : "IntercoreComms_HighLevelApp"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -891,7 +891,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-ranlib.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-ranlib.exe"
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -907,7 +907,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-readelf.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-readelf.exe"
 		},
 		{
 			"name" : "CMAKE_ROOT",
@@ -1127,7 +1127,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-strip.exe"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/Sysroots/17/tools/gcc/arm-poky-linux-musleabi-strip.exe"
 		},
 		{
 			"name" : "CMAKE_TAPI",
@@ -1155,7 +1155,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK//CMakeFiles/AzureSphereRTCoreToolchain.cmake"
+			"value" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK//CMakeFiles/AzureSphereToolchain.cmake"
 		},
 		{
 			"name" : "CMAKE_TRY_COMPILE_TARGET_TYPE",
@@ -1186,7 +1186,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "IntercoreComms_RTApp_MT3620_BareMetal_BINARY_DIR",
+			"name" : "IntercoreComms_HighLevelApp_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1195,10 +1195,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug"
+			"value" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug"
 		},
 		{
-			"name" : "IntercoreComms_RTApp_MT3620_BareMetal_IS_TOP_LEVEL",
+			"name" : "IntercoreComms_HighLevelApp_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1210,7 +1210,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "IntercoreComms_RTApp_MT3620_BareMetal_SOURCE_DIR",
+			"name" : "IntercoreComms_HighLevelApp_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1219,7 +1219,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal"
+			"value" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp"
 		}
 	],
 	"kind" : "cache",

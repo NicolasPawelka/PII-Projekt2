@@ -41,7 +41,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "IntercoreComms_HighLevelApp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-IntercoreComms_HighLevelApp-Debug-df17a82206af90bb9bdc.json",
+					"jsonFile" : "target-IntercoreComms_HighLevelApp-Debug-4e911e208e572a97f054.json",
 					"name" : "IntercoreComms_HighLevelApp",
 					"projectIndex" : 0
 				},
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug",
-		"source" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp"
+		"build" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug",
+		"source" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp"
 	},
 	"version" : 
 	{

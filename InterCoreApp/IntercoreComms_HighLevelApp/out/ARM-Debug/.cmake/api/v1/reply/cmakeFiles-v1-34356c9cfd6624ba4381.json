@@ -10,7 +10,7 @@
 		},
 		{
 			"isExternal" : true,
-			"path" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/CMakeFiles/AzureSphereRTCoreToolchain.cmake"
+			"path" : "C:/Program Files (x86)/Microsoft Azure Sphere SDK/CMakeFiles/AzureSphereToolchain.cmake"
 		},
 		{
 			"isExternal" : true,
@@ -98,8 +98,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug",
-		"source" : "C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal"
+		"build" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug",
+		"source" : "C:/Users/phlam/Desktop/Master Studium/1. Semester WS 2526/PII/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp"
 	},
 	"version" : 
 	{
