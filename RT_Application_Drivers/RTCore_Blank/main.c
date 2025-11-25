@@ -92,18 +92,22 @@ void Gpt3_WaitUs(int microseconds)
 	WriteReg32(GPT_BASE, 0x50, 0x0);
 }
 
-void MotorSpeedSetAB(uint8_t var) {
-    uint8_t speed = var;
+void MotorSpeedSetAB(uint8_t motor_1_speed, uint8_t motor_2_speed) {
 
-    uint8_t data[3];
-    data[0] = MotorSpeedSet;
-    data[1] = speed;
-    data[2] = speed; 
+    uint8_t data_motor_1[3];
+    data_motor_1[0] = MotorSpeedSet;
+    data_motor_1[1] = motor_1_speed;
+    data_motor_1[2] = motor_1_speed; 
     
 
-    int ret1 = SC18IM700_I2cWrite(driver_Uart, I2CMotor2, data, sizeof(data));
+    uint8_t data_motor_2[3];
+    data_motor_2[0] = MotorSpeedSet;
+    data_motor_2[1] = motor_2_speed;
+    data_motor_2[2] = motor_2_speed;
+
+    int ret1 = SC18IM700_I2cWrite(driver_Uart, I2CMotor2, data_motor_1, sizeof(data_motor_1));
     vTaskDelay(pdMS_TO_TICKS(50));
-    int ret2 = SC18IM700_I2cWrite(driver_Uart, I2CMotorDriverAdd, data, sizeof(data));
+    int ret2 = SC18IM700_I2cWrite(driver_Uart, I2CMotorDriverAdd, data_motor_2, sizeof(data_motor_2));
 
     while(!ret1 || !ret2){
         // do nothing
@@ -169,8 +173,6 @@ void GetRotatedd(uint8_t dir){
 
 
 
-
-
 static void GPIO_Init(){
 
     GPIO_ConfigurePinForOutput(0);
@@ -209,7 +211,6 @@ static void gpio_task(void *pParameters)
 
 }
 
-
 static void motor_task(void *pParameters)
 {
     UART_Print(debug,"Starte Motor Task");
@@ -224,19 +225,14 @@ static void motor_task(void *pParameters)
         if (result == pdPASS){
             if(notificationValue & 0x01){
                 UART_Print(debug,"Sicher zum Fahren");
-                MotorSpeedSetAB(25);
+                MotorSpeedSetAB(25,30);
                 GetRotatedd(0b1010);
                 vTaskDelay(pdMS_TO_TICKS(500));
-                MotorSpeedSetAB(0);
-                vTaskDelay(pdMS_TO_TICKS(500));
             }else if(notificationValue & 0x02){
-                UART_Print(debug,"STOP");
+                MotorSpeedSetAB(0,0);
             }
 
         }
-
-
-        
         
     }
 

@@ -89,11 +89,11 @@
 			[
 				{
 					"isSystem" : true,
-					"path" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/lib/gcc/arm-none-eabi/10.3.1/include"
+					"path" : "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/lib/gcc/arm-none-eabi/14.2.1/include"
 				},
 				{
 					"isSystem" : true,
-					"path" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/arm-none-eabi/include"
+					"path" : "C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/arm-none-eabi/include"
 				}
 			],
 			"language" : "C",
@@ -118,7 +118,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-nostartfiles -Wl,--no-undefined -Wl,-n -T \"C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld\"",
+				"fragment" : "-nostartfiles -Wl,--no-undefined -Wl,-n -T \"C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/linker.ld\"",
 				"role" : "flags"
 			}
 		],

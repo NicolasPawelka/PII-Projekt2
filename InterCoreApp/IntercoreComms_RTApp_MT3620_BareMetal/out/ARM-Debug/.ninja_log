@@ -1,12 +1,12 @@
 # ninja log v7
-16	133	7850867004140738	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-intercore.c.obj	cbee1244333a6c9d
-27	139	7850867004252105	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-timer.c.obj	12f30e6740d75b46
-11	140	7850867004098541	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-dpc.c.obj	ff41c7e54aced48
-7	141	7850867004047040	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-intercore.c.obj	6cbb87ae8cfbaf1d
-21	150	7850867004189719	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-uart-poll.c.obj	616ecfed21b5905b
-1	152	7850867003997347	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj	7890dcc2952d5687
-153	257	7850867005508720	IntercoreComms_RTApp_MT3620_BareMetal.out	7f9833df5f396d08
-257	359	7850867007513302	approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app	33dfe783ce8c4aec
-257	359	7850867007513302	C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app	33dfe783ce8c4aec
-359	829	7850867012013713	IntercoreComms_RTApp_MT3620_BareMetal.imagepackage	71b1c1ae53eb2d1e
-359	829	7850867012013713	C:/Users/phlam/Desktop/PII-Projekt/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/IntercoreComms_RTApp_MT3620_BareMetal.imagepackage	71b1c1ae53eb2d1e
+35	264	7857574798438055	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-uart-poll.c.obj	5f7e14ac81d00b5d
+42	272	7857574798520176	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-timer.c.obj	ecf36f6a33efda34
+28	273	7857574798380225	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/mt3620-intercore.c.obj	60c12389239ff261
+21	280	7857574798310224	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-dpc.c.obj	9d507d859e034034
+14	304	7857574798239785	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/logical-intercore.c.obj	da70a41acc9b1488
+7	375	7857574798169832	CMakeFiles/IntercoreComms_RTApp_MT3620_BareMetal.dir/main.c.obj	e74d50f36769728b
+376	515	7857574801865175	IntercoreComms_RTApp_MT3620_BareMetal.out	91cceaa161d673f2
+515	707	7857574805104192	approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app	2a220b30fe01db99
+515	707	7857574805104192	C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/approotIntercoreComms_RTApp_MT3620_BareMetal/bin/app	2a220b30fe01db99
+708	1506	7857574812971182	IntercoreComms_RTApp_MT3620_BareMetal.imagepackage	e61fdfd5498c7ba6
+708	1506	7857574812971182	C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_RTApp_MT3620_BareMetal/out/ARM-Debug/IntercoreComms_RTApp_MT3620_BareMetal.imagepackage	e61fdfd5498c7ba6
