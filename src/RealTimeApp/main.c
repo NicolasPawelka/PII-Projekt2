@@ -34,7 +34,6 @@ TaskHandle_t task2Handle = NULL;
 
 
 static IntercoreComm icc;
-static const uint32_t sendIntervalMs = 1000;
 // High-Level-App Component ID
 static const ComponentId hlAppId = {
     .data1 = 0xc910d996,
@@ -135,7 +134,6 @@ void MotorSpeedSetAB(uint8_t motor_1_speed, uint8_t motor_2_speed) {
 float measure(void)
 {
     bool echo = false;
-    unsigned long long t_start = 0, t_end = 0;
     uint32_t pulseBegin,pulseEnd;
 
     GPIO_ConfigurePinForOutput(US_PIN);
@@ -286,6 +284,7 @@ _Noreturn void RTCoreMain(void){
     
     VectorTableInit();
     CPUFreq_Set(197600000);
+    GPIO_Init();
 
     IntercoreResult icr = SetupIntercoreComm(&icc,NULL);
 
