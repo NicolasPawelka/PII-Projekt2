@@ -18,7 +18,9 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 
-
+typedef struct{
+    int distance;
+}Message;
 
 
 
@@ -33,33 +35,14 @@ static Connection_IotHub_Config config = {.hubHostname = "PIIOT-Hub.azure-device
 static const char rtAppComponentId[] = "6b2de05f-eb0f-4433-90e5-74eb950f35c4";
 
 
-static void SocketEventHandler(EventLoop *el, int fd, EventLoop_IoEvents events, void *context) {
-    char rxBuf[32];
-    int bytesReceived = recv(fd, rxBuf, sizeof(rxBuf), 0);
 
-    if (bytesReceived == -1) {
-        Log_Debug("ERROR: Unable to receive message: %d (%s)\n", errno, strerror(errno));
-        exitCode = -1;
-        return;
-    }
 
-    Log_Debug("Received %d bytes: ", bytesReceived);
-    for (int i = 0; i < bytesReceived; ++i) {
-        Log_Debug("%c", isprint(rxBuf[i]) ? rxBuf[i] : '.');
-    }
-    Log_Debug("\n");
-}
-
-typedef struct{
-    int distance;
-}Message;
-
-AzureIoT_Result Send_Message (void){
-    int message = rand() % (100 + 1);
+AzureIoT_Result Send_Message (Message message){
+    Log_Debug("Versende Nachricht");
     
     JSON_Value *value = json_value_init_object();
     JSON_Object *root = json_value_get_object(value);
-    json_object_dotset_number(root,"distance",message);
+    json_object_dotset_number(root,"distance",message.distance);
     char* serializedMessage = json_serialize_to_string(value);
     AzureIoT_Result result  = AzureIoT_SendTelemetry(serializedMessage,NULL,NULL);
     
@@ -72,20 +55,46 @@ AzureIoT_Result Send_Message (void){
 }
 
 
-static void TimerCallback(EventLoopTimer *timer)
-{
-     if (ConsumeEventLoopTimerEvent(timer) != 0) {
-        exitCode = ExitCode_TelemetryTimer_Consume;
+static void SocketEventHandler(EventLoop *el, int fd, EventLoop_IoEvents events, void *context) {
+    char rxBuf[32];
+    int bytesReceived = recv(fd, rxBuf, sizeof(rxBuf), 0);
+    Message mes;
+
+    if (bytesReceived == -1) {
+        Log_Debug("ERROR: Unable to receive message: %d (%s)\n", errno, strerror(errno));
+        exitCode = -1;
         return;
     }
-    Log_Debug("Versende Nachricht....");
-    AzureIoT_Result result = Send_Message();
+
+    if (bytesReceived == 2) {
+    uint16_t value =
+    ((uint16_t)(uint8_t)rxBuf[1] << 8) |
+    (uint16_t)(uint8_t)rxBuf[0];
+
+
+    Log_Debug("Wert: %u\n", value);
+    mes.distance = value;
+    Send_Message(mes);
+    }
+    Log_Debug("\n");
+
+}
+
+
+// static void TimerCallback(EventLoopTimer *timer)
+// {
+//      if (ConsumeEventLoopTimerEvent(timer) != 0) {
+//         exitCode = ExitCode_TelemetryTimer_Consume;
+//         return;
+//     }
+//     Log_Debug("Versende Nachricht....");
+//     AzureIoT_Result result = Send_Message();
     
 
-     if(result  != AzureIoT_Result_OK){
-        Log_Debug("Versenden der Nachricht fehlgescchlagen!\n");
-    }
-}
+//      if(result  != AzureIoT_Result_OK){
+//         Log_Debug("Versenden der Nachricht fehlgescchlagen!\n");
+//     }
+// }
 
 static ExitCode SetupEventLoop(void)
 {
@@ -98,8 +107,8 @@ static ExitCode SetupEventLoop(void)
         return ExitCode_Init_EventLoop;
     }
 
-    Log_Debug("Event Loop wurde erstellt. Erstelle Timer...\n");
-    timer = CreateEventLoopPeriodicTimer(eventLoop, &TimerCallback, &timePeriod);
+    // Log_Debug("Event Loop wurde erstellt. Erstelle Timer...\n");
+    // timer = CreateEventLoopPeriodicTimer(eventLoop, &TimerCallback, &timePeriod);
     sockFd = Application_Connect(rtAppComponentId);
     if (sockFd == -1) return -1;
 
@@ -110,12 +119,12 @@ static ExitCode SetupEventLoop(void)
     socketEventReg = EventLoop_RegisterIo(eventLoop, sockFd, EventLoop_Input, SocketEventHandler, NULL);
     if (!socketEventReg) return -3;
     if (sockFd == -1) return -4;
-    if (timer == NULL)
-    {
-        return ExitCode_Init_TelemetryTimer;
-    }
+    // if (timer == NULL)
+    // {
+    //     return ExitCode_Init_TelemetryTimer;
+    // }
 
-    Log_Debug("Timer wurde gestartet\n");
+    // Log_Debug("Timer wurde gestartet\n");
     return ExitCode_Success;
 }
 

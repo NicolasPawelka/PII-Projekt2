@@ -1,8 +1,11 @@
 #include"communication.h"
+#include"lib/UART.h"
+#include"lib/Print.h"
+extern uint16_t new_value;
+static UART* debug;
 
 
 static IntercoreComm icc;
-// High-Level-App Component ID
 static const ComponentId hlAppId = {
     .data1 = 0xc910d996,
     .data2 = 0xd180,
@@ -12,16 +15,19 @@ static const ComponentId hlAppId = {
 
 
 
-void HandleSendTimerDeferred(void)
+bool SendMessageToA7(void)
 {
-    static char msg[] = "RT->HL";
-    IntercoreResult ret =  IntercoreSend(&icc, &hlAppId, msg, sizeof(msg) - 1);
+    
+    size_t data_size = sizeof(new_value);
+    UART_Printf(debug, "Aktueller Value: %d\r\n", new_value);
+
+    IntercoreResult ret =  IntercoreSend(&icc, &hlAppId, &new_value, data_size);
 
     if (ret != Intercore_OK){
-        while(true){
-            //do nothing
-        }
+       return false;
     }
+
+    return true;
 
 
 }
@@ -29,13 +35,32 @@ void HandleSendTimerDeferred(void)
 
 void send_task(void *pParameters){
 
+    uint32_t notificationValue;
+    debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
+    
     while(1){
-        HandleSendTimerDeferred();
-        vTaskDelay(pdMS_TO_TICKS(2000));
+        BaseType_t result = xTaskNotifyWait(0x00,0x07, &notificationValue,portMAX_DELAY);
+        bool res = false;
+
+        if(result == pdPASS){
+            if(notificationValue & 0x01){
+                res = SendMessageToA7();
+                if (res == false){
+                    while (1)
+                    {
+                        // do nothing
+                    }
+                    
+                }
+            }
+
+        }
+
+
+        
     }
-
-
 }
+
 
 void SetupCommunication(){
     IntercoreResult icr = SetupIntercoreComm(&icc,NULL);

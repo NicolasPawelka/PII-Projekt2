@@ -1,7 +1,13 @@
 #include"ultraschall.h"
+#include"general.h"
 
 
 static const uintptr_t GPT_BASE = 0x21030000;
+uint16_t new_value;
+extern TaskHandle_t MessTaskHandle;
+extern TaskHandle_t MotorTaskHandle;
+extern TaskHandle_t SendeTaskHandle;
+
 
 // void WriteReg32(uintptr_t baseAddr, size_t offset, uint32_t value){
 //     *(volatile uint32_t*)(baseAddr + offset) = value;
@@ -79,19 +85,24 @@ void Gpt3_WaitUs(int microseconds)
 
 void mess_task(void* parameter)
 {
+    // UART* debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
     
     float dist = 0;
     while(1){
 
         dist = measure();
+        // UART_Printf(debug,"Aktueller Value: %f",dist);
+        new_value = dist;
         
         if (dist > 30){
-            xTaskNotify(*((TaskHandle_t*)parameter), 0x01, eSetBits);
+            //xTaskNotify(MotorTaskHandle, 0x01, eSetBits);
+             xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
         }else{
-            xTaskNotify(*((TaskHandle_t*)parameter), 0x02 , eSetBits);
+            //xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
+            xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
         }
 
-        vTaskDelay(pdMS_TO_TICKS(1000));
+        vTaskDelay(pdMS_TO_TICKS(500));
     }
 
 }

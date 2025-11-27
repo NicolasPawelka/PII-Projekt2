@@ -4,6 +4,6 @@
 #include "logical-intercore.h"
 
 
-void HandleSendTimerDeferred(void);
+bool SendMessageToA7(void);
 void send_task(void *pParameters);
 void SetupCommunication();

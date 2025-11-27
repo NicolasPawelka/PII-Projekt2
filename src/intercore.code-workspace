@@ -30,7 +30,8 @@
             "freertos.h": "c",
             "general.h": "c",
             "motor.h": "c",
-            "vectortable.h": "c"
+            "vectortable.h": "c",
+            "logical-intercore.h": "c"
         }
     },
     "launch": {
