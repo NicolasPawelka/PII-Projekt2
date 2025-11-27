@@ -29,7 +29,8 @@
             "stdbool.h": "c",
             "freertos.h": "c",
             "general.h": "c",
-            "motor.h": "c"
+            "motor.h": "c",
+            "vectortable.h": "c"
         }
     },
     "launch": {

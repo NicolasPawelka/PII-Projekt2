@@ -4,8 +4,8 @@
 #include"communication.h"
 
 static UART *debug = NULL;
-TaskHandle_t task1Handle = NULL;
-TaskHandle_t task2Handle = NULL;
+TaskHandle_t MessTaskHandle = NULL;
+TaskHandle_t MotorTaskHandle = NULL;
 
 
 
@@ -22,9 +22,9 @@ _Noreturn void RTCoreMain(void){
     UART_Print(debug, "Hallo\r\n");
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
     UART_Print(debug, "--------------------------------\r\n");
-
-    xTaskCreate(motor_task, "Task zum Ansteuern der Motor Treiber", 2048, NULL, 5, &task2Handle);
-    xTaskCreate(mess_task, "Task zum kontinuirlichen Messen des Abstands",2048,(void*)task2Handle,5,&task1Handle);
+    
+    xTaskCreate(motor_task, "Task zum Ansteuern der Motor Treiber", 2048, NULL, 5, &MotorTaskHandle);
+    xTaskCreate(mess_task, "Task zum kontinuirlichen Messen des Abstands",2048,(void*)MotorTaskHandle,5,&MessTaskHandle);
     xTaskCreate(send_task,"Task zur Kommunikation mit dem A7 Kern (High-Level App)",2048,NULL,5,NULL);
     vTaskStartScheduler();
 
