@@ -11,7 +11,7 @@ void RxHandler()
 }
 
 
-void MotorSpeedSetAB(UART* driver_Uart,uint8_t motor_1_speed, uint8_t motor_2_speed) {
+void SetSpeed(UART* driver_Uart,uint8_t motor_1_speed, uint8_t motor_2_speed) {
 
     uint8_t data_motor_1[3];
     data_motor_1[0] = MotorSpeedSet;
@@ -35,7 +35,7 @@ void MotorSpeedSetAB(UART* driver_Uart,uint8_t motor_1_speed, uint8_t motor_2_sp
 }
 
 
-void GetRotatedd(UART* driver_Uart,uint8_t dir){
+void Drive(UART* driver_Uart,uint8_t dir){
 
     uint8_t data[2];
     data[0] = DirectionSet;
@@ -65,11 +65,11 @@ void motor_task(void *pParameters)
 
         if (result == pdPASS){
             if(notificationValue & 0x01){
-                MotorSpeedSetAB(driver_Uart, 25,30);
-                GetRotatedd(driver_Uart, 0b1010);
+                SetSpeed(driver_Uart, 25,30);
+                Drive(driver_Uart, 0b1010);
                 vTaskDelay(pdMS_TO_TICKS(500));
             }else if(notificationValue & 0x02){
-                MotorSpeedSetAB(driver_Uart, 0,0);
+                SetSpeed(driver_Uart, 0,0);
             }
 
         }
