@@ -24,6 +24,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/lib
     ${CMAKE_SOURCE_DIR}/Grove_Shield_Driver/include
     ${CMAKE_SOURCE_DIR}/Intercore
+    ${CMAKE_SOURCE_DIR}/PIIOT
    
 )
 
@@ -49,6 +50,7 @@ set(APP_SRC
     ${CMAKE_SOURCE_DIR}/Intercore/mt3620-intercore.c
     ${CMAKE_SOURCE_DIR}/Intercore/logical-dpc.c
     ${CMAKE_SOURCE_DIR}/Intercore/mt3620-timer.c
+    ${CMAKE_SOURCE_DIR}/PIIOT/motor.c
 )
 
 # --- Executable ---

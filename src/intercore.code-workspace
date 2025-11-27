@@ -7,7 +7,11 @@
             "path": "RealTimeApp"
         }
     ],
-    "settings": {},
+    "settings": {
+        "files.associations": {
+            "semphr.h": "c"
+        }
+    },
     "launch": {
         "configurations": [{
             "name": "Launch Azure Sphere Apps (All Cores)",
