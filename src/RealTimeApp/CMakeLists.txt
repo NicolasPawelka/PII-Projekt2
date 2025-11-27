@@ -51,6 +51,7 @@ set(APP_SRC
     ${CMAKE_SOURCE_DIR}/Intercore/logical-dpc.c
     ${CMAKE_SOURCE_DIR}/Intercore/mt3620-timer.c
     ${CMAKE_SOURCE_DIR}/PIIOT/motor.c
+    ${CMAKE_SOURCE_DIR}/PIIOT/ultraschall.c
 )
 
 # --- Executable ---

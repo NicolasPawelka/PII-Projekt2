@@ -27,12 +27,11 @@
 #include"Grove_Shield_Driver/include/GroveUart.h"
 
 #include"motor.h"
+#include"ultraschall.h"
 
 static UART *debug = NULL;
-static UART *driver_Uart = NULL;
 bool *state = false;
-TaskHandle_t task1Handle = NULL;
-TaskHandle_t task2Handle = NULL;
+
 
 
 static IntercoreComm icc;
@@ -44,11 +43,8 @@ static const ComponentId hlAppId = {
     .data4 = {0x8b, 0x85, 0xa6, 0xc7, 0x01, 0x5c, 0x8c, 0x45}
 };
 
-
-
-#define US_PIN 0
-static const uintptr_t GPT_BASE = 0x21030000;
-
+TaskHandle_t task1Handle = NULL;
+TaskHandle_t task2Handle = NULL;
 
 
 void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
@@ -58,78 +54,9 @@ void vApplicationStackOverflowHook(TaskHandle_t xTask, char *pcTaskName)
 
 
 
-// void WriteReg32(uintptr_t baseAddr, size_t offset, uint32_t value){
-//     *(volatile uint32_t*)(baseAddr + offset) = value;
-// }
-
-// uint32_t ReadReg32(uintptr_t baseAddr, size_t offset)
-// {
-// 	return *(volatile uint32_t*)(baseAddr + offset);
-// }
 
 
-void Gpt3_WaitUs(int microseconds)
-{
-	// GPT3_INIT = initial counter value
-	WriteReg32(GPT_BASE, 0x54, 0x0);
-    
 
-	// GPT3_CTRL
-	uint32_t ctrlOn = 0x0;
-	ctrlOn |= (0x19) << 16; // OSC_CNT_1US (default value)
-	ctrlOn |= 0x1;          // GPT3_EN = 1 -> GPT3 enabled
-	WriteReg32(GPT_BASE, 0x50, ctrlOn);
-
-	// GPT3_CNT
-	while (ReadReg32(GPT_BASE, 0x58) < microseconds)
-	{
-		// empty.
-	}
-
-	// GPT_CTRL -> disable timer
-	WriteReg32(GPT_BASE, 0x50, 0x0);
-}
-
-
-float measure(void)
-{
-    bool echo = false;
-    uint32_t pulseBegin,pulseEnd;
-
-    GPIO_ConfigurePinForOutput(US_PIN);
-    GPIO_Write(US_PIN, false);
-    Gpt3_WaitUs(2);
-    GPIO_Write(US_PIN, true);
-    Gpt3_WaitUs(5);
-    
-    // GPT3_CTRL - starts microsecond resolution clock
-	uint32_t ctrlOn = 0x0;
-	ctrlOn |= (0x19) << 16; // OSC_CNT_1US (default value)
-	ctrlOn |= 0x1;          // GPT3_EN = 1 -> GPT3 enabled
-	WriteReg32(GPT_BASE, 0x50, ctrlOn);
-    
-
-    GPIO_ConfigurePinForInput(US_PIN);
-
-    
-
-    do {
-        GPIO_Read(US_PIN, &echo);
-    } while (!echo);
-
-    pulseBegin = ReadReg32(GPT_BASE, 0x58);
-    
-    do {
-        GPIO_Read(US_PIN, &echo);
-    } while (echo);
-
-    pulseEnd = ReadReg32(GPT_BASE, 0x58);
-
-	// GPT_CTRL -> disable timer
-	WriteReg32(GPT_BASE, 0x50, 0x0);
-
-	return (pulseEnd - pulseBegin) / 58.0;
-}
 
 
 
@@ -153,24 +80,6 @@ static void GPIO_Init(){
 }
 
 
-static void gpio_task(void *pParameters)
-{
-    float dist = 0;
-    while(1){
-
-        dist = measure();
-        UART_Printf(debug,"Aktuelle Distanz %f\r\n",dist);
-        
-        if (dist > 30){
-            xTaskNotify(task2Handle, 0x01, eSetBits);
-        }else{
-            xTaskNotify(task2Handle, 0x02 , eSetBits);
-        }
-
-        vTaskDelay(pdMS_TO_TICKS(1000));
-    }
-
-}
 
 
 
@@ -220,8 +129,9 @@ _Noreturn void RTCoreMain(void){
     UART_Print(debug, "App built on: " __DATE__ " " __TIME__ "\r\n");
 
 
-    // xTaskCreate(gpio_task, "GPIO_Task",2048,NULL,5,&task1Handle);
+    
     xTaskCreate(motor_task, "Motor_Task", 2048, NULL, 5, &task2Handle);
+    xTaskCreate(gpio_task, "GPIO_Task",2048,(void*)task2Handle,5,&task1Handle);
     xTaskCreate(send_task,"Send_Task",2048,NULL,5,NULL);
     vTaskStartScheduler();
 

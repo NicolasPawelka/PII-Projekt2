@@ -9,7 +9,9 @@
     ],
     "settings": {
         "files.associations": {
-            "semphr.h": "c"
+            "semphr.h": "c",
+            "print.h": "c",
+            "mt3620-intercore.h": "c"
         }
     },
     "launch": {
