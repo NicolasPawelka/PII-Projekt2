@@ -38,5 +38,7 @@ In FreeRTOSConfig.h:
 #define vPortSVCHandler			SVC_Handler                   --> muss zu SVCall
 #define xPortSysTickHandler		SysTick_Handler               --> muss zu SysTick
 
+az iot hub monitor-events --hub-name PIIOT-Hub
+
 
 
