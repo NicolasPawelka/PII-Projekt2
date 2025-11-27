@@ -21,4 +21,3 @@ bool GroveI2C_ReadReg16(UART* handle, uint8_t address, uint8_t reg, uint16_t* va
 bool GroveI2C_ReadReg24BE(UART* handle, uint8_t address, uint8_t reg, uint32_t* val);
 
 void GroveShield_Initialize(UART* handle, uint32_t baudrate);
-static void baudrate_conf(UART* handle, unsigned int baudrate);

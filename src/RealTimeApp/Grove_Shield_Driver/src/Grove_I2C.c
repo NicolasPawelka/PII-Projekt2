@@ -225,61 +225,61 @@ bool GroveI2C_ReadReg24BE(UART* handle, uint8_t address, uint8_t reg, uint32_t* 
 
 
 
-static void baudrate_conf(UART* handle, unsigned int baudrate)
-{
-	static uint8_t trial = 0;
-	uint8_t d0, d1;
-	uint8_t conf[4] = { 0 };
-	SC18IM700_ReadReg(handle, 0x00, &d0);
-    // UART_Close(handle);
-	UART* tmp  = UART_Open(MT3620_UNIT_ISU0, 9600,UART_PARITY_NONE,1,NULL);
-	// handle = tmp;
-	// SC18IM700_ReadReg(tmp, 0x00, &d0);
+// static void baudrate_conf(UART* handle, unsigned int baudrate)
+// {
+// 	static uint8_t trial = 0;
+// 	uint8_t d0, d1;
+// 	uint8_t conf[4] = { 0 };
+// 	SC18IM700_ReadReg(handle, 0x00, &d0);
+//     // UART_Close(handle);
+// 	UART* tmp  = UART_Open(MT3620_UNIT_ISU0, 9600,UART_PARITY_NONE,1,NULL);
+// 	// handle = tmp;
+// 	// SC18IM700_ReadReg(tmp, 0x00, &d0);
 
-	while (true)
-	{
-		d0 = 0, d1 = 0;
-		while (d0 != baudrate_9600_conf[1])
-		{
-			SC18IM700_ReadReg(handle, 0x00, &d0);		
-		}
-		while (d1 != baudrate_9600_conf[3])
-		{
-			SC18IM700_ReadReg(handle, 0x01, &d1);
-		}		
-		//Log_Debug("BR1: %x %x\n", d0, d1);
-		if (d0 == baudrate_9600_conf[1] && d1 == baudrate_9600_conf[3]) break;
-		vTaskDelay(pdMS_TO_TICKS(5));
-	}
+// 	while (true)
+// 	{
+// 		d0 = 0, d1 = 0;
+// 		while (d0 != baudrate_9600_conf[1])
+// 		{
+// 			SC18IM700_ReadReg(handle, 0x00, &d0);		
+// 		}
+// 		while (d1 != baudrate_9600_conf[3])
+// 		{
+// 			SC18IM700_ReadReg(handle, 0x01, &d1);
+// 		}		
+// 		//Log_Debug("BR1: %x %x\n", d0, d1);
+// 		if (d0 == baudrate_9600_conf[1] && d1 == baudrate_9600_conf[3]) break;
+// 		vTaskDelay(pdMS_TO_TICKS(5));
+// 	}
 
-	/** Change UART baudrate for SC18IM700 */		
-	if (baudrate == 230400) memcpy(conf, baudrate_230400_conf, 4);
-	else if(baudrate == 115200) memcpy(conf, baudrate_115200_conf, 4);
-	else if (baudrate == 19200) memcpy(conf, baudrate_19200_conf, 4);
-	else if (baudrate == 14400) memcpy(conf, baudrate_14400_conf, 4);
-	else if (baudrate == 9600) memcpy(conf, baudrate_9600_conf, 4);
-	else {
-		return;
-	}
-	SC18IM700_WriteRegBytes(handle, conf, 4);
+// 	/** Change UART baudrate for SC18IM700 */		
+// 	if (baudrate == 230400) memcpy(conf, baudrate_230400_conf, 4);
+// 	else if(baudrate == 115200) memcpy(conf, baudrate_115200_conf, 4);
+// 	else if (baudrate == 19200) memcpy(conf, baudrate_19200_conf, 4);
+// 	else if (baudrate == 14400) memcpy(conf, baudrate_14400_conf, 4);
+// 	else if (baudrate == 9600) memcpy(conf, baudrate_9600_conf, 4);
+// 	else {
+// 		return;
+// 	}
+// 	SC18IM700_WriteRegBytes(handle, conf, 4);
 
-	UART_Close(handle);
-	handle = UART_Open(MT3620_UNIT_ISU0, baudrate,UART_PARITY_NONE,1,NULL);
+// 	UART_Close(handle);
+// 	handle = UART_Open(MT3620_UNIT_ISU0, baudrate,UART_PARITY_NONE,1,NULL);
 
-	SC18IM700_ReadReg(handle, 0x00, &d0);
-	SC18IM700_ReadReg(handle, 0x01, &d1);
+// 	SC18IM700_ReadReg(handle, 0x00, &d0);
+// 	SC18IM700_ReadReg(handle, 0x01, &d1);
 
-	//Log_Debug("BR2: %x %x\n", d0, d1);
+// 	//Log_Debug("BR2: %x %x\n", d0, d1);
 
-	if ((d0 != conf[1]) || (d1 != conf[3]))
-	{
-		trial++;
-		if (trial > 10) return;
-		baudrate_conf(handle, baudrate);
-	}
-	trial = 0;
-}
-void GroveShield_Initialize(UART* handle, uint32_t baudrate)
-{
-	baudrate_conf(handle, baudrate);
-}
+// 	if ((d0 != conf[1]) || (d1 != conf[3]))
+// 	{
+// 		trial++;
+// 		if (trial > 10) return;
+// 		baudrate_conf(handle, baudrate);
+// 	}
+// 	trial = 0;
+// }
+// void GroveShield_Initialize(UART* handle, uint32_t baudrate)
+// {
+// 	baudrate_conf(handle, baudrate);
+// }
