@@ -28,7 +28,6 @@ static int sockFd = -1;
 static EventRegistration *socketEventReg = NULL;
 IOTHUB_DEVICE_CLIENT_LL_HANDLE iothubClientHandle;
 static EventLoop *eventLoop = NULL;
-static EventLoopTimer *timer = NULL;
 static volatile sig_atomic_t exitCode = ExitCode_Success;
 
 static Connection_IotHub_Config config = {.hubHostname = "PIIOT-Hub.azure-devices.net"};
@@ -80,22 +79,6 @@ static void SocketEventHandler(EventLoop *el, int fd, EventLoop_IoEvents events,
 
 }
 
-
-// static void TimerCallback(EventLoopTimer *timer)
-// {
-//      if (ConsumeEventLoopTimerEvent(timer) != 0) {
-//         exitCode = ExitCode_TelemetryTimer_Consume;
-//         return;
-//     }
-//     Log_Debug("Versende Nachricht....");
-//     AzureIoT_Result result = Send_Message();
-    
-
-//      if(result  != AzureIoT_Result_OK){
-//         Log_Debug("Versenden der Nachricht fehlgescchlagen!\n");
-//     }
-// }
-
 static ExitCode SetupEventLoop(void)
 {
     Log_Debug("Starting Event Loop Setup\n");
@@ -107,8 +90,6 @@ static ExitCode SetupEventLoop(void)
         return ExitCode_Init_EventLoop;
     }
 
-    // Log_Debug("Event Loop wurde erstellt. Erstelle Timer...\n");
-    // timer = CreateEventLoopPeriodicTimer(eventLoop, &TimerCallback, &timePeriod);
     sockFd = Application_Connect(rtAppComponentId);
     if (sockFd == -1) return -1;
 
@@ -119,12 +100,7 @@ static ExitCode SetupEventLoop(void)
     socketEventReg = EventLoop_RegisterIo(eventLoop, sockFd, EventLoop_Input, SocketEventHandler, NULL);
     if (!socketEventReg) return -3;
     if (sockFd == -1) return -4;
-    // if (timer == NULL)
-    // {
-    //     return ExitCode_Init_TelemetryTimer;
-    // }
-
-    // Log_Debug("Timer wurde gestartet\n");
+    
     return ExitCode_Success;
 }
 
@@ -173,7 +149,6 @@ int main(void)
             }
         }
 
-        DisposeEventLoopTimer(timer);
         AzureIoT_Cleanup();
         EventLoop_Close(eventLoop);
         Log_Debug("Exiting application with code %d\n", exitCode);
