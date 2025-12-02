@@ -22,6 +22,9 @@
 #define I2CMotorDriverAdd         0x1F
 #define I2CMotor2                 0x0F
 
+#define MOTOR_A                   0xaa
+#define MOTOR_B                   0xa1
+
 void SetSpeed(UART*,uint8_t, uint8_t);
-void Drive(UART*,uint8_t);
+void Drive(UART* driver_Uart, uint8_t motor ,uint8_t dir);
 void motor_task(void *pParameters);

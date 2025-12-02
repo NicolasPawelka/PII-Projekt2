@@ -35,16 +35,26 @@ void SetSpeed(UART* driver_Uart,uint8_t motor_1_speed, uint8_t motor_2_speed) {
 }
 
 
-void Drive(UART* driver_Uart,uint8_t dir){
+void Drive(UART* driver_Uart, uint8_t motor ,uint8_t dir){
 
     uint8_t data[2];
     data[0] = DirectionSet;
     data[1] = dir;   
 
-    int ret1 = SC18IM700_I2cWrite(driver_Uart,I2CMotor2,data,sizeof(data));
-    int ret2 = SC18IM700_I2cWrite(driver_Uart,I2CMotorDriverAdd,data,sizeof(data));
+    uint8_t adress = 0;
+
+    if(MOTOR_A == motor){
+        adress = I2CMotorDriverAdd;
+    }else if(MOTOR_B == motor){
+        adress = I2CMotor2;
+    }
+
+
+
+    int ret1 = SC18IM700_I2cWrite(driver_Uart,adress,data,sizeof(data));
+    // int ret2 = SC18IM700_I2cWrite(driver_Uart,I2CMotorDriverAdd,data,sizeof(data));
     
-    while(!ret1 || !ret2){
+    while(!ret1){
         //do nothing
     }
 
@@ -66,10 +76,17 @@ void motor_task(void *pParameters)
         if (result == pdPASS){
             if(notificationValue & 0x01){
                 SetSpeed(driver_Uart, 25,30);
-                Drive(driver_Uart, 0b1010);
+                Drive(driver_Uart,MOTOR_A, 0b1010);
+                Drive(driver_Uart,MOTOR_B, 0b1010);
                 vTaskDelay(pdMS_TO_TICKS(500));
             }else if(notificationValue & 0x02){
                 SetSpeed(driver_Uart, 0,0);
+                
+                //try rotating
+                SetSpeed(driver_Uart,25,25);
+                Drive(driver_Uart,MOTOR_A,0b1010);
+                Drive(driver_Uart,MOTOR_B,0b0101);
+                vTaskDelay(pdMS_TO_TICKS(500));
             }
 
         }
