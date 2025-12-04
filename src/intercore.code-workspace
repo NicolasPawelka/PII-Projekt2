@@ -31,7 +31,12 @@
             "general.h": "c",
             "motor.h": "c",
             "vectortable.h": "c",
-            "logical-intercore.h": "c"
+            "logical-intercore.h": "c",
+            "iothubtransportmqtt.h": "c",
+            "application.h": "c",
+            "iothub_device_client_ll.h": "c",
+            "iothub_transport_ll.h": "c",
+            "iothub_client_options.h": "c"
         }
     },
     "launch": {

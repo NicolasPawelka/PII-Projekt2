@@ -242,6 +242,7 @@ static void SetUpAzureIoTHubClient(void)
     }
 
     if (connectionStatus == Connection_NotStarted || connectionStatus == Connection_Failed) {
+        Log_Debug("Starte Connection...\n");
         Connection_Start();
     }
 }
@@ -321,8 +322,17 @@ AzureIoT_Result AzureIoT_SetCallbacks(AzureIoT_Callbacks cbs)
     if (cbs.connectionStatusCallbackFunction)
         callbacks.connectionStatusCallbackFunction = cbs.connectionStatusCallbackFunction;
 
-    if (cbs.deviceMethodCallbackFunction)
-        callbacks.deviceMethodCallbackFunction = cbs.deviceMethodCallbackFunction;
+    if (cbs.deviceMethodCallbackFunction) {
+    Log_Debug("Setze Callback....\n");
+    callbacks.deviceMethodCallbackFunction = cbs.deviceMethodCallbackFunction;
+
+    if (callbacks.deviceMethodCallbackFunction == NULL) {
+        Log_Debug("Failed to set Callback\n");
+    } else {
+        Log_Debug("Es wurde die richtige Funktion gesetzt\n");
+    }
+}
+
 
     if (cbs.deviceTwinReceivedCallbackFunction)
         callbacks.deviceTwinReceivedCallbackFunction = cbs.deviceTwinReceivedCallbackFunction;
@@ -459,6 +469,7 @@ static int DeviceMethodCallback(const char *methodName, const unsigned char *pay
                                                         responseSize);
     }
 
+    Log_Debug("%d",result);
     return result;
 }
 
