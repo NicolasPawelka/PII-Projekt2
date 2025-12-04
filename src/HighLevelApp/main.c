@@ -23,6 +23,7 @@
 #include <iothub.h>
 
 #include <inttypes.h>
+#include<stdio.h>
 
 #include "azure_macro_utils/macro_utils.h"
 #include "iothub_client_options.h"
@@ -30,23 +31,6 @@
 #include "iothub_message.h"
 
 AzureIoT_Callbacks call;
-
-static int deviceMethodCallback(const char *methodName,
-                                const unsigned char *payload,
-                                size_t payloadSize,
-                                unsigned char **response,
-                                size_t *responseSize) {
-    Log_Debug("Ich wurde aufgerufen!");
-    const char resp[] = "{ \"result\": \"AllesRoger\" }";
-    *responseSize = sizeof(resp) - 1;
-    *response = malloc(*responseSize);
-    memcpy(*response, resp, *responseSize);
-    return 200;
-}
-
-
-
-
 typedef struct{
     int distance;
 }Message;
@@ -57,9 +41,44 @@ static int sockFd = -1;
 static EventRegistration *socketEventReg = NULL;
 static EventLoop *eventLoop = NULL;
 static volatile sig_atomic_t exitCode = ExitCode_Success;
+bool send_Flag = false;
 
 static Connection_IotHub_Config config = {.hubHostname = "PIIOTFree.azure-devices.net"};
 static const char rtAppComponentId[] = "6b2de05f-eb0f-4433-90e5-74eb950f35c4";
+
+static void SendMessageToRTApp(void) {
+    static int iter = 0;
+    static char txMessage[32];
+    snprintf(txMessage, sizeof(txMessage), "hl-app-to-rt-app-%02d", iter);
+    iter = (iter + 1) % 100;
+
+    Log_Debug("Sending: %s\n", txMessage);
+
+    int bytesSent = send(sockFd, txMessage, strlen(txMessage), 0);
+    if (bytesSent == -1) {
+        Log_Debug("ERROR: Unable to send message: %d (%s)\n", errno, strerror(errno));
+        exitCode = -1;
+    }
+    Log_Debug("Gesendet");
+}
+
+static int deviceMethodCallback(const char *methodName,
+                                const unsigned char *payload,
+                                size_t payloadSize,
+                                unsigned char **response,
+                                size_t *responseSize) {
+    send_Flag = false;
+    const char resp[] = "{ \"result\": \"AllesRoger\" }";
+    *responseSize = sizeof(resp) - 1;
+    *response = malloc(*responseSize);
+    memcpy(*response, resp, *responseSize);
+    return 200;
+}
+
+
+
+
+
 
 
 
@@ -100,7 +119,7 @@ static void SocketEventHandler(EventLoop *el, int fd, EventLoop_IoEvents events,
     (uint16_t)(uint8_t)rxBuf[0];
 
 
-    //Log_Debug("Wert: %u\n", value);
+    Log_Debug("Wert: %u\n", value);
     mes.distance = value;
     //Send_Message(mes);
     }
@@ -179,6 +198,10 @@ int main(void)
 
     while (exitCode == ExitCode_Success) {
         EventLoop_Run_Result result = EventLoop_Run(eventLoop, -1, true);
+        if (send_Flag) {
+        send_Flag = false;
+        SendMessageToRTApp();
+        }
         if (result == EventLoop_Run_Failed) {
             exitCode = ExitCode_Main_EventLoopFail;
         }

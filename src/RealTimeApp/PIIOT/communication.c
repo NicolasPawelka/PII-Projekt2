@@ -62,8 +62,20 @@ void send_task(void *pParameters){
 }
 
 
+static void CallbackForHighLevel(void)
+{
+    UART_Printf(debug,"Bin hier");
+    uint8_t rxBuf[32];
+    size_t rxSize = sizeof(rxBuf);
+    ComponentId sender;
+
+    while (IntercoreRecv(&icc, &sender, rxBuf, &rxSize) == Intercore_OK) {
+        UART_Printf(debug, "Nachricht erhalten");
+    }
+}
+
 void SetupCommunication(){
-    IntercoreResult icr = SetupIntercoreComm(&icc,NULL);
+    IntercoreResult icr = SetupIntercoreComm(&icc,CallbackForHighLevel);
 
     if (icr != Intercore_OK){
         while(true){
@@ -71,3 +83,5 @@ void SetupCommunication(){
         }
     }
 }
+
+
