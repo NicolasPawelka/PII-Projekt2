@@ -29,68 +29,21 @@
 #include "iothub.h"
 #include "iothub_message.h"
 
-
-static const struct timespec interval = {
-    .tv_sec = 0,
-    .tv_nsec = 100 * 1000 * 1000
-};
-static IOTHUB_DEVICE_CLIENT_LL_HANDLE client;
 AzureIoT_Callbacks call;
 
-static const char* connectionString = "HostName=PIIOTFree.azure-devices.net;DeviceId=830cdd8aa23ff106502f452e27b7f0992d2fb0d1152f473e90277c8115a2407530940b794b05ab06713ae900a31abaa1ae453d4cea113c5e9d241bd16e3d76aa;x509=true";
 static int deviceMethodCallback(const char *methodName,
                                 const unsigned char *payload,
                                 size_t payloadSize,
                                 unsigned char **response,
                                 size_t *responseSize) {
-    const char resp[] = "{ \"result\": \"ok\" }";
+    Log_Debug("Ich wurde aufgerufen!");
+    const char resp[] = "{ \"result\": \"AllesRoger\" }";
     *responseSize = sizeof(resp) - 1;
     *response = malloc(*responseSize);
     memcpy(*response, resp, *responseSize);
     return 200;
 }
 
-
-
-static void twin_method(void){
-
-    IOTHUB_CLIENT_TRANSPORT_PROVIDER protocoll;
-
-
-    protocoll = MQTT_Protocol;
-
-    if(IoTHub_Init() != 0){
-        Log_Debug("Failed to init");
-    }
-
-    else
-    {
-        if((client = IoTHubDeviceClient_LL_CreateFromConnectionString(connectionString,protocoll)) == NULL){
-            Log_Debug("ERROR: Client Handle  is NULL\r\n");
-        }
-        else
-        {
-            bool urlEnocdeOn = true;
-            Log_Debug("Created client=%p\n", client);
-
-            IOTHUB_CLIENT_RESULT res_1 = IoTHubDeviceClient_LL_SetOption(client, OPTION_AUTO_URL_ENCODE_DECODE, &urlEnocdeOn);
-            
-            IOTHUB_CLIENT_RESULT res =  IoTHubDeviceClient_LL_SetDeviceMethodCallback(client,deviceMethodCallback,NULL);
-
-            if(res_1 != IOTHUB_CLIENT_OK || res != IOTHUB_CLIENT_OK){
-                Log_Debug("Client init failed\n");
-            }else{
-                Log_Debug("Initialisierung direct method war erfolgreich\n");
-
-            }
-            
-        }
-        
-    }
-
-
-
-}
 
 
 
@@ -147,7 +100,7 @@ static void SocketEventHandler(EventLoop *el, int fd, EventLoop_IoEvents events,
     (uint16_t)(uint8_t)rxBuf[0];
 
 
-    Log_Debug("Wert: %u\n", value);
+    //Log_Debug("Wert: %u\n", value);
     mes.distance = value;
     //Send_Message(mes);
     }
@@ -218,7 +171,6 @@ int main(void)
     }
 
     Log_Debug("AzureIoT Init erfolgreich\n");
-    //twin_method(); 
 
     ExitCode timerCode = SetupEventLoop();
     if (timerCode != ExitCode_Success) {
@@ -233,7 +185,6 @@ int main(void)
     }
 
     AzureIoT_Cleanup();
-    IoTHubDeviceClient_LL_Destroy(client);
     IoTHub_Deinit();
     EventLoop_Close(eventLoop);
     Log_Debug("Exiting application with code %d\n", exitCode);
