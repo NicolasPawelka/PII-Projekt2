@@ -1,6 +1,7 @@
 #include"FreeRTOS.h"
 #include<stdint.h>
 #include"lib/UART.h"
+#include"lib/Print.h"
 #include"portmacro.h"
 #include"projdefs.h"
 #include"task.h"
@@ -28,3 +29,5 @@
 void SetSpeed(UART*,uint8_t, uint8_t);
 void Drive(UART* driver_Uart, uint8_t motor ,uint8_t dir);
 void motor_task(void *pParameters);
+void init_MPU9250();
+void MPU9250_Task(void*);

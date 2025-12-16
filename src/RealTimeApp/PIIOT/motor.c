@@ -1,9 +1,21 @@
 #include"motor.h"
 
+#define REG_WHO_AM_I 0x75
+#define REG_PWR_MGMT_1  0x6B
+#define REG_SMPLRT_DIV  0x19
+#define REG_CONFIG      0x1A
+#define REG_ACCEL_CFG   0x1C
+#define REG_ACCEL_CFG2  0x1D
+
+#define REG_ACCEL_XOUT_H 0x3B
+#define REG_ACCEL_XOUT_L 0x3C
+#define MPU_ADDR 0xD1
+
 
 uint8_t rxBuffer[64];
 volatile uint32_t rxWritePos;
 uint8_t data;
+UART* driver_Uart;
 
 void RxHandler()
 {
@@ -60,8 +72,87 @@ void Drive(UART* driver_Uart, uint8_t motor ,uint8_t dir){
 
 }
 
-void read_MPU9250(){
+void MPU9250_Task(void *parameters){
+
+    init_MPU9250();
+    UART* debug =UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
+
+    while(1){
+        
+        uint8_t data;
+        SC18IM700_ReadReg(driver_Uart,REG_ACCEL_XOUT_L,&data);
+        UART_Printf(debug,"Aktueller Value: %d",data);
+
+    }
+}
+
+void init_MPU9250(){
+
+    driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
+    uint8_t data = 0xE0;
+    int ret1 = SC18IM700_I2cWrite(driver_Uart, 0xE0, &data, 1);
+    if(!ret1){
+        while(1){
+
+        }
+    }
     
+    uint8_t data_2[2];
+    data_2[0] = REG_PWR_MGMT_1;
+    data_2[1] = 0x01;   
+
+
+    int ret_2 = SC18IM700_I2cWrite(driver_Uart, MPU_ADDR,data_2,sizeof(data_2));
+
+    if(!ret_2){
+        while(1){
+
+        }
+    }   
+
+    data_2[0] = REG_SMPLRT_DIV;
+    data_2[1] = 0x05;
+
+    int ret_3 = SC18IM700_I2cWrite(driver_Uart,MPU_ADDR,data_2,sizeof(data_2));
+
+    if(!ret_3){
+        while(1){
+            
+        }
+    }
+
+    data_2[0] = REG_CONFIG;
+    data_2[1] = 0x03;
+
+    int ret_4 = SC18IM700_I2cWrite(driver_Uart,MPU_ADDR,data_2,sizeof(data_2));
+
+    if(!ret_4){
+        while(1){
+            
+        }
+    }
+
+    data_2[0] = REG_ACCEL_CFG;
+    data_2[1] = 0x0;
+
+    int ret_5 = SC18IM700_I2cWrite(driver_Uart,MPU_ADDR,data_2,sizeof(data_2));
+
+    if(!ret_5){
+        while(1){
+            
+        }
+    }
+
+    data_2[0] = REG_ACCEL_CFG2;
+    data_2[1] = 0x06;
+
+    int ret_6 = SC18IM700_I2cWrite(driver_Uart,MPU_ADDR,data_2,sizeof(data_2));
+
+    if(!ret_6){
+        while(1){
+            
+        }
+    }
     
 
 
@@ -70,20 +161,16 @@ void read_MPU9250(){
 
 
 
+
+
 void motor_task(void *pParameters)
 {
     // Wichtig UART Baud Rate auf 9600 da das Grove Shield mit diesem Wert bootet
     // Öffnen und Schließen des UART Handles führt zu Problemen daher ist das umgehen
     // der Shield Config sinnvoll
-    UART* driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
+ 
     uint32_t notificationValue;
-    uint8_t data = 0xE0;
-    int ret1 = SC18IM700_I2cWrite(driver_Uart, 0xE0, &data, 1);
-    if(!ret1){
-        while(1){
-
-        }
-    }
+   
     while(1){
         BaseType_t result = xTaskNotifyWait(0x00, 0x07,&notificationValue, portMAX_DELAY);
 
