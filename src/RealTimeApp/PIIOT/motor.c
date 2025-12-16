@@ -60,6 +60,13 @@ void Drive(UART* driver_Uart, uint8_t motor ,uint8_t dir){
 
 }
 
+void read_MPU9250(){
+    
+    
+
+
+
+}
 
 
 
@@ -70,6 +77,13 @@ void motor_task(void *pParameters)
     // der Shield Config sinnvoll
     UART* driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
     uint32_t notificationValue;
+    uint8_t data = 0xE0;
+    int ret1 = SC18IM700_I2cWrite(driver_Uart, 0xE0, &data, 1);
+    if(!ret1){
+        while(1){
+
+        }
+    }
     while(1){
         BaseType_t result = xTaskNotifyWait(0x00, 0x07,&notificationValue, portMAX_DELAY);
 

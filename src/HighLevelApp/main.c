@@ -58,6 +58,7 @@ static void SendMessageToRTApp(void) {
     if (bytesSent == -1) {
         Log_Debug("ERROR: Unable to send message: %d (%s)\n", errno, strerror(errno));
         exitCode = -1;
+        return;
     }
     Log_Debug("Gesendet");
 }
@@ -67,7 +68,7 @@ static int deviceMethodCallback(const char *methodName,
                                 size_t payloadSize,
                                 unsigned char **response,
                                 size_t *responseSize) {
-    send_Flag = false;
+    send_Flag = true;
     const char resp[] = "{ \"result\": \"AllesRoger\" }";
     *responseSize = sizeof(resp) - 1;
     *response = malloc(*responseSize);
@@ -121,9 +122,9 @@ static void SocketEventHandler(EventLoop *el, int fd, EventLoop_IoEvents events,
 
     Log_Debug("Wert: %u\n", value);
     mes.distance = value;
-    //Send_Message(mes);
+    Send_Message(mes);
     }
-    Log_Debug("\n");
+    //Log_Debug("\n");
 
 }
 

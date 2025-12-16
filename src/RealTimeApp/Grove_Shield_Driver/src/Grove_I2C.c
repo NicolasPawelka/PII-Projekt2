@@ -31,15 +31,21 @@ struct UART {
     void (*rxCallback)(void);
 }; 
 
-
-static void wait_for_i2cState_ok(UART* handle){
+ bool wait_for_i2cState_ok(UART* handle){
 
     uint8_t state;
+	uint8_t count = 0;
     SC18IM700_ReadReg(handle,0x0A, &state);
 
     while(state != 0xF0){
+		if(count <6){
         SC18IM700_ReadReg(handle,0x0A,&state);
+		count++;
+		}else{
+			return false;
+		}
     }
+	return true;
 
 
 }
@@ -60,9 +66,9 @@ bool SC18IM700_I2cWrite(UART* handle, uint8_t address, const uint8_t* data, int 
 	
     UART_Write(handle,send, (int)sizeof(send));
 
-	wait_for_i2cState_ok(handle);
+	int ret = wait_for_i2cState_ok(handle);
 
-	return true;
+	return ret;
 	
 }
 

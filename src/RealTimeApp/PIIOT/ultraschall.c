@@ -95,11 +95,13 @@ void mess_task(void* parameter)
         new_value = dist;
         
         if (dist > 30){
-            xTaskNotify(MotorTaskHandle, 0x01, eSetBits);
+            //xTaskNotify(MotorTaskHandle, 0x01, eSetBits);
              xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
+            dist++;
         }else{
-            xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
+            //xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
             xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
+            dist--;
         }
 
         vTaskDelay(pdMS_TO_TICKS(500));

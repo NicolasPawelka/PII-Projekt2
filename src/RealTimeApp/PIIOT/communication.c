@@ -1,8 +1,10 @@
 #include"communication.h"
 #include"lib/UART.h"
 #include"lib/Print.h"
+#include"mt3620-uart-poll.h"
 extern uint16_t new_value;
 static UART* debug;
+
 
 
 static IntercoreComm icc;
@@ -19,7 +21,7 @@ bool SendMessageToA7(void)
 {
     
     size_t data_size = sizeof(new_value);
-    UART_Printf(debug, "Aktueller Value: %d\r\n", new_value);
+   UART_Printf(debug, "Aktueller Value: %d\r\n", new_value);
 
     IntercoreResult ret =  IntercoreSend(&icc, &hlAppId, &new_value, data_size);
 
@@ -62,20 +64,21 @@ void send_task(void *pParameters){
 }
 
 
+
 static void CallbackForHighLevel(void)
 {
-    UART_Printf(debug,"Bin hier");
-    uint8_t rxBuf[32];
-    size_t rxSize = sizeof(rxBuf);
+    uint8_t tmp[16];
+    size_t size = sizeof(tmp);
     ComponentId sender;
 
-    while (IntercoreRecv(&icc, &sender, rxBuf, &rxSize) == Intercore_OK) {
-        UART_Printf(debug, "Nachricht erhalten");
-    }
+    IntercoreResult icr = IntercoreRecv(&icc, &sender, tmp, &size);
+    if(icr != Intercore_OK || size == 0) return;
+
 }
 
+
 void SetupCommunication(){
-    IntercoreResult icr = SetupIntercoreComm(&icc,CallbackForHighLevel);
+    IntercoreResult icr = SetupIntercoreComm(&icc,NULL);
 
     if (icr != Intercore_OK){
         while(true){
