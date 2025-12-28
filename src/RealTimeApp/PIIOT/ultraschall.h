@@ -12,5 +12,5 @@
 #define BUZZER_PIN 0
 
 void Gpt3_WaitUs(int);
-float measure(void);
+float measure(int);
 void mess_task(void*);
