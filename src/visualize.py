@@ -59,6 +59,10 @@ def on_event_batch(partition_context, events):
                 event.body_as_str().split(":")[1].replace("}", "")
             )
             data.append(distance)
+
+            with open("database.json", "a") as f:
+                f.write(str(distance))
+                f.write("\n")
             
         except Exception as e:
             print("Parse error:", e)
