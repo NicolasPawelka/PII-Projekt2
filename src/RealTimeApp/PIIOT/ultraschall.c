@@ -88,6 +88,7 @@ void mess_task(void* parameter)
     // UART* debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
     
     float dist = 0;
+    GPIO_ConfigurePinForOutput(BUZZER_PIN);
     while(1){
 
         dist = measure();
@@ -97,11 +98,12 @@ void mess_task(void* parameter)
         if (dist > 30){
             //xTaskNotify(MotorTaskHandle, 0x01, eSetBits);
              xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
-            dist++;
         }else{
             //xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
             xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
-            dist--;
+            GPIO_Write(BUZZER_PIN,true);
+            vTaskDelay(pdMS_TO_TICKS(500));
+            GPIO_Write(BUZZER_PIN,false);        
         }
 
         vTaskDelay(pdMS_TO_TICKS(500));

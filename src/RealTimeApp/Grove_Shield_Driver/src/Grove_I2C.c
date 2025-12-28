@@ -72,7 +72,7 @@ bool SC18IM700_I2cWrite(UART* handle, uint8_t address, const uint8_t* data, int 
 	
 }
 
-static bool SC18IM700_I2cRead(UART* handle, uint8_t address, uint8_t* data, int dataSize)
+bool SC18IM700_I2cRead(UART* handle, uint8_t address, uint8_t* data, int dataSize)
 {
 	// Send
 

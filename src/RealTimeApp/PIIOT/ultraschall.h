@@ -8,7 +8,8 @@
 #include "mt3620-timer.h"
 
 
-#define US_PIN 0
+#define US_PIN 4
+#define BUZZER_PIN 0
 
 void Gpt3_WaitUs(int);
 float measure(void);

@@ -29,5 +29,5 @@
 void SetSpeed(UART*,uint8_t, uint8_t);
 void Drive(UART* driver_Uart, uint8_t motor ,uint8_t dir);
 void motor_task(void *pParameters);
-void init_MPU9250();
+bool init_MPU9250();
 void MPU9250_Task(void*);

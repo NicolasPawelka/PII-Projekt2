@@ -7,8 +7,12 @@
 #define REG_ACCEL_CFG   0x1C
 #define REG_ACCEL_CFG2  0x1D
 
-#define REG_ACCEL_XOUT_H 0x3B
-#define REG_ACCEL_XOUT_L 0x3C
+#define REG_ACCEL_XOUT_H   0x3B
+#define REG_ACCEL_XOUT_L   0x3C
+#define REG_ACCEL_YOUT_H   0x3D
+#define REG_ACCEL_YOUT_L   0x3E
+#define REG_ACCEL_ZOUT_H   0x3F
+#define REG_ACCEL_ZOUT_L   0x40
 #define MPU_ADDR 0xD1
 
 
@@ -74,29 +78,51 @@ void Drive(UART* driver_Uart, uint8_t motor ,uint8_t dir){
 
 void MPU9250_Task(void *parameters){
 
-    init_MPU9250();
+    bool ret_2 = init_MPU9250();
+    while(!ret_2){
+        
+    }
     UART* debug =UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
+    uint8_t data1;
+    uint8_t data2;
+
 
     while(1){
-        
-        uint8_t data;
-        SC18IM700_ReadReg(driver_Uart,REG_ACCEL_XOUT_L,&data);
-        UART_Printf(debug,"Aktueller Value: %d",data);
+        uint8_t h, l;
+        int16_t ax;
+        bool ret_1 = false;
+
+        ret_1 = GroveI2C_ReadReg8(driver_Uart, MPU_ADDR, REG_ACCEL_XOUT_H, &data1);
+        if(ret_1){
+            UART_Printf(debug,"Help\r\n");
+        }
+        // GroveI2C_ReadReg16(driver_Uart, MPU_ADDR, REG_ACCEL_XOUT_L, &data2);
+
+        //SC18IM700_ReadReg(driver_Uart, REG_ACCEL_XOUT_H, &h);
+        //SC18IM700_ReadReg(driver_Uart, REG_ACCEL_XOUT_L, &l);
+      
+        UART_Printf(debug, "Data High: %x\r\n" , data1);
+        // UART_Printf(debug, "Data Low: %x\n" , data2);
+
+        vTaskDelay(pdMS_TO_TICKS(500));
+
+
 
     }
 }
 
-void init_MPU9250(){
+bool init_MPU9250(){
 
     driver_Uart = UART_Open(MT3620_UNIT_ISU0,9600,UART_PARITY_NONE,1,RxHandler);
-    uint8_t data = 0xE0;
-    int ret1 = SC18IM700_I2cWrite(driver_Uart, 0xE0, &data, 1);
-    if(!ret1){
-        while(1){
+    // uint8_t data = 0xE0;
+    // int ret1 = SC18IM700_I2cWrite(driver_Uart, 0xE0, &data, 1);
+    // if(!ret1){
+    //     while(1){
 
-        }
-    }
+    //     }
+    // }
     
+    int done = true;
     uint8_t data_2[2];
     data_2[0] = REG_PWR_MGMT_1;
     data_2[1] = 0x01;   
@@ -155,7 +181,7 @@ void init_MPU9250(){
     }
     
 
-
+    return done;
 
 }
 

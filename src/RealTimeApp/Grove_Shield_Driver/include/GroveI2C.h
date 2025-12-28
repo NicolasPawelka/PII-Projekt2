@@ -11,6 +11,7 @@ bool SC18IM700_ReadReg(UART* handle, uint8_t reg, uint8_t* data);
 void SC18IM700_WriteReg(UART* handle, uint8_t reg, uint8_t data);
 void SC18IM700_WriteRegBytes(UART* handle, uint8_t *data, uint8_t dataSize);
 bool SC18IM700_I2cWrite(UART* handle, uint8_t address, const uint8_t* data, int dataSize);
+bool SC18IM700_I2cRead(UART* handle, uint8_t address, uint8_t* data, int dataSize);
 
 
 void GroveI2C_WriteReg8(UART* handle, uint8_t address, uint8_t reg, uint8_t val);
