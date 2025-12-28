@@ -91,7 +91,6 @@ AzureIoT_Result Send_Message (Message message){
     JSON_Value *value = json_value_init_object();
     JSON_Object *root = json_value_get_object(value);
     json_object_dotset_number(root,"distance",message.distance);
-    json_object_dotset_number(root,"acceleration",message.acceleration);
     char* serializedMessage = json_serialize_to_string(value);
     AzureIoT_Result result  = AzureIoT_SendTelemetry(serializedMessage,NULL,NULL);
     

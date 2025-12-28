@@ -38,7 +38,6 @@ float measure(void)
 
     GPIO_ConfigurePinForInput(US_PIN);
 
-    
 
     do {
         GPIO_Read(US_PIN, &echo);
@@ -96,14 +95,12 @@ void mess_task(void* parameter)
         new_value = dist;
         
         if (dist > 30){
-            //xTaskNotify(MotorTaskHandle, 0x01, eSetBits);
+            xTaskNotify(MotorTaskHandle, 0x01, eSetBits);
              xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
         }else{
-            //xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
+            xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
             xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
-            GPIO_Write(BUZZER_PIN,true);
-            vTaskDelay(pdMS_TO_TICKS(500));
-            GPIO_Write(BUZZER_PIN,false);        
+                 
         }
 
         vTaskDelay(pdMS_TO_TICKS(500));
