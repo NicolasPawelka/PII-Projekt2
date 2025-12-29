@@ -1,8 +1,0 @@
-# ninja log v7
-14	143	7857643803139198	CMakeFiles/IntercoreComms_HighLevelApp.dir/eventloop_timer_utilities.c.obj	7c237fc83fb7c0c
-4	153	7857643802953767	CMakeFiles/IntercoreComms_HighLevelApp.dir/main.c.obj	1f4bad002c8278a0
-154	317	7857643804556187	IntercoreComms_HighLevelApp.out	80d7a3ef5b19174b
-317	490	7857643807791470	approotIntercoreComms_HighLevelApp/bin/app	5846cd233a4db78
-317	490	7857643807791470	C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/approotIntercoreComms_HighLevelApp/bin/app	5846cd233a4db78
-490	1171	7857643814443111	IntercoreComms_HighLevelApp.imagepackage	3f110849326220bb
-490	1171	7857643814443111	C:/Users/pawel/OneDrive/Desktop/repo/PII-Projekt2/InterCoreApp/IntercoreComms_HighLevelApp/out/ARM-Debug/IntercoreComms_HighLevelApp.imagepackage	3f110849326220bb
