@@ -2,11 +2,10 @@
 #include"lib/UART.h"
 #include"lib/Print.h"
 #include"mt3620-uart-poll.h"
+
+
 extern uint16_t new_value;
 static UART* debug;
-
-
-
 static IntercoreComm icc;
 static const ComponentId hlAppId = {
     .data1 = 0xc910d996,
@@ -64,17 +63,6 @@ void send_task(void *pParameters){
 }
 
 
-
-static void CallbackForHighLevel(void)
-{
-    uint8_t tmp[16];
-    size_t size = sizeof(tmp);
-    ComponentId sender;
-
-    IntercoreResult icr = IntercoreRecv(&icc, &sender, tmp, &size);
-    if(icr != Intercore_OK || size == 0) return;
-
-}
 
 
 void SetupCommunication(){
