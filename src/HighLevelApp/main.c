@@ -129,7 +129,6 @@ static void sende_daten(bool success, void *context)
 
 AzureIoT_Callbacks callbacks = {
     .sendTelemetryCallbackFunction = sende_daten,
-    .deviceMethodCallbackFunction = deviceMethodCallback,
 };
 
 
