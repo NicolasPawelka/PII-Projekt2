@@ -47,39 +47,6 @@ bool send_Flag = false;
 static Connection_IotHub_Config config = {.hubHostname = "PIIOTFree.azure-devices.net"};
 static const char rtAppComponentId[] = "6b2de05f-eb0f-4433-90e5-74eb950f35c4";
 
-static void SendMessageToRTApp(void) {
-    static int iter = 0;
-    static char txMessage[32];
-    snprintf(txMessage, sizeof(txMessage), "hl-app-to-rt-app-%02d", iter);
-    iter = (iter + 1) % 100;
-
-    Log_Debug("Sending: %s\n", txMessage);
-
-    int bytesSent = send(sockFd, txMessage, strlen(txMessage), 0);
-    if (bytesSent == -1) {
-        Log_Debug("ERROR: Unable to send message: %d (%s)\n", errno, strerror(errno));
-        exitCode = -1;
-        return;
-    }
-    Log_Debug("Gesendet");
-}
-
-static int deviceMethodCallback(const char *methodName,
-                                const unsigned char *payload,
-                                size_t payloadSize,
-                                unsigned char **response,
-                                size_t *responseSize) {
-    send_Flag = true;
-    const char resp[] = "{ \"result\": \"AllesRoger\" }";
-    *responseSize = sizeof(resp) - 1;
-    *response = malloc(*responseSize);
-    memcpy(*response, resp, *responseSize);
-    return 200;
-}
-
-
-
-
 
 AzureIoT_Result Send_Message (Message message){
     Log_Debug("Versende Nachricht");
