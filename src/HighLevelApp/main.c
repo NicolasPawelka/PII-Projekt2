@@ -81,10 +81,6 @@ static int deviceMethodCallback(const char *methodName,
 
 
 
-
-
-
-
 AzureIoT_Result Send_Message (Message message){
     Log_Debug("Versende Nachricht");
     
@@ -200,10 +196,6 @@ int main(void)
 
     while (exitCode == ExitCode_Success) {
         EventLoop_Run_Result result = EventLoop_Run(eventLoop, -1, true);
-        if (send_Flag) {
-        send_Flag = false;
-        SendMessageToRTApp();
-        }
         if (result == EventLoop_Run_Failed) {
             exitCode = ExitCode_Main_EventLoopFail;
         }
