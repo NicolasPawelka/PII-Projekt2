@@ -55,6 +55,7 @@ set(APP_SRC
     ${CMAKE_SOURCE_DIR}/PIIOT/ultraschall.c
     ${CMAKE_SOURCE_DIR}/PIIOT/general.c
     ${CMAKE_SOURCE_DIR}/PIIOT/communication.c
+    ${CMAKE_SOURCE_DIR}/PIIOT/Buzzer.c
 )
 
 # --- Executable ---

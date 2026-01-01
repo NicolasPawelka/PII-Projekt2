@@ -1,5 +1,6 @@
 #include"ultraschall.h"
 #include"general.h"
+#include"FreeRTOS.h"
 
 
 static const uintptr_t GPT_BASE = 0x21030000;
@@ -87,46 +88,22 @@ void mess_task(void* parameter)
     // UART* debug = UART_Open(MT3620_UNIT_UART_DEBUG,115200,UART_PARITY_NONE,1,NULL);
     
     float dist = 0;
-    float dist_2 = 0;
-    int tmp = 0;
-    bool turn = 0;
     while(1){
 
         dist = measure(US_PIN);
-        dist_2 = measure(BUZZER_PIN);
         
         // UART_Printf(debug,"Aktueller Value: %f",dist);
         new_value = dist;
+        xQueueOverwrite(distanceQueue, &dist);
 
-        if(dist < 30){
-            turn = true;
-        }
-
-        if(dist_2 < 15){
-            turn = true;
-            tmp = 30;
-        }
-
-        if (turn == true){
-            xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
-            xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
-            if(dist_2 <= tmp + 5){
-                turn = false;
-            }
-        }
-        else{
-            tmp = dist;
+        if(dist > 30){
             xTaskNotify(MotorTaskHandle, 0x01, eSetBits);
             xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
         }
-        // else{
-        //     xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
-        //     xTaskNotify(SendeTaskHandle, 0x01, eSetBits);
-        //     if(tmp == 0){
-        //         tmp = dist;
-        //     }
-                 
-        // }
+        else{
+            xTaskNotify(MotorTaskHandle, 0x02 , eSetBits);
+            xTaskNotify(SendeTaskHandle, 0x01, eSetBits);        
+        }
 
         vTaskDelay(pdMS_TO_TICKS(500));
     }
