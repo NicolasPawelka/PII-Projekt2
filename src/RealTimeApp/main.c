@@ -3,7 +3,6 @@
 #include"general.h"
 #include"communication.h"
 
-static UART *debug = NULL;
 TaskHandle_t MessTaskHandle = NULL;
 TaskHandle_t MotorTaskHandle = NULL;
 TaskHandle_t SendeTaskHandle = NULL;
